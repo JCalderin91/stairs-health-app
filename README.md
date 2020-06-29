@@ -1,8 +1,5 @@
-# Vuetify-Starter
+# Stairs Health
 
-Learning or Starter Project with Vuex, Vue-router with a simple example there.
-
-You can find on-going update at: https://github.com/osify/vuetify-starter
 
 ## Project setup
 ```
