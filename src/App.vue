@@ -1,46 +1,33 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Resource Centers</span>
-        <span class="font-weight-light"></span>
+    <v-app-bar class="py-4" color="primary" app>
+      <v-toolbar-title class="container-logo">
+        <img class="logo-app" src="@/assets/logo-white.png" alt="">
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text @click="dialog = true" target="_blank">
-        <span class="mr-2">Capacity Building for IT</span>
-      </v-btn>
+
+      <div class="menu-nav-bar">
+        <span>How it Works</span>
+        <span>Explode Savings</span>
+        <span>Become a Member</span>
+        <span>For Providers</span>
+        <span>Contact Us</span>
+      </div>
+ 
+
+      <v-spacer></v-spacer>
+
+      <div class="menu-nav-bar">
+        <span>Login</span>
+        <span>|</span>
+        <span>Register</span>
+      </div>
+      
     </v-app-bar>
 
     <v-content>
       <router-view/>
-    </v-content>
-    <v-layout>
-      <v-dialog v-model="dialog" persistent width="800" >
-        <v-card>
-          <v-card-title class="headline grey lighten-2" primary-title>
-            Training Info
-          </v-card-title>
-
-          <v-card-text>
-            <p>This is a special training by MT!</p>
-            <p>If you want to join, please contact to MT.</p>
-          </v-card-text>
-
-          <v-divider></v-divider>
-
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn
-              color="primary"
-              text
-              @click="dialog = false"
-            >
-              I accept
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-    </v-layout>
+    </v-content>   
   </v-app>
 </template>
 
@@ -53,3 +40,21 @@ export default {
   }),
 };
 </script>
+
+<style lang="scss" scope >
+*{
+  font-family: 'Raleway', sans-serif; 
+}
+.container-logo,
+.logo-app{
+  height: 100%;
+}
+.menu-nav-bar{
+  span{
+    padding: 3px 5px;
+    margin: 0 3px;
+    color: white;
+  }
+}
+
+</style>
