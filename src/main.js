@@ -6,8 +6,8 @@ import store from './store';
 import { sync } from 'vuex-router-sync';
 import axios from 'axios';
 
-Vue.config.productionTip = false;
 
+Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
 
 sync(store, router);

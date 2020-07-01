@@ -33,6 +33,7 @@
 							<a href="#">
 								<img class="icon" src="@/assets/icons/globe-americas.svg" alt="">
 							</a>
+
 						</div>
 					</v-container>
 				</v-col>
@@ -67,7 +68,7 @@ export default {
 	},
 	methods: {
 		getUrl () {
-			return require('../assets/image/' + this.banners[this.showBanner])
+			return require('../../assets/image/' + this.banners[this.showBanner])
 		},
 		setBanner (indx) {
 			this.showBanner = indx
