@@ -15,8 +15,24 @@
 
 					</ul>
 				</v-col>
-				<v-col :md="6" class="d-flex justify-center">
-					<img class="img-phone" :src="getUrl()" :alt="showBanner">
+				<v-col :md="6">
+					<div style="width:100%;margin:20px auto;height:400px">
+						<slider ref="slider" :options="options" @slide="slide">
+							<!-- slideritem wrapped package with the components you need -->
+							<slideritem>
+								<img class="img-phone" src="@/assets/image/banner-gif-1.png" alt="">
+							</slideritem>
+							<slideritem>
+								<img class="img-phone" src="@/assets/image/banner-gif-2.png" alt="">
+							</slideritem>
+							<slideritem>
+								<img class="img-phone" src="@/assets/image/banner-gif-3.png" alt="">
+							</slideritem>
+							<!-- Customizable loading -->
+							<div slot="loading">Cargando...</div>
+						</slider>
+					</div>
+					
 				</v-col>
 				<v-col :sm="12" class="up">
 					<v-container>
@@ -33,14 +49,13 @@
 							<a href="#">
 								<img class="icon" src="@/assets/icons/globe-americas.svg" alt="">
 							</a>
-
 						</div>
 					</v-container>
 				</v-col>
 				<v-col :sm="12" class="up d-flex justify-center">
 					<div class="banner-dots">
-						<div @click="setBanner(index)" :class="{'active': index===showBanner}" class="dot" v-for="(dot, index) in banners" :key="index"></div>
-					</div>
+						<div @click="setBanner(i-1)" :class="{'active': (i-1)===showBanner}" class="dot" v-for="i in 3" :key="i"></div>
+						</div>
 				</v-col>
 			</v-row>
 			
@@ -49,29 +64,31 @@
 </template>
 
 <script>
+import { slider, slideritem } from 'vue-concise-slider'
 export default {
+	components: {
+		slider, slideritem
+	},
 	data () {
 		return {
-			banners: [
-				'banner-gif-1.png',
-				'banner-gif-2.png',
-				'banner-gif-3.png'
-			],
-			showBanner: 0
+			showBanner: 0,
+			options: {
+				currentPage: 0,
+				infinite: 1,
+				slidesToScroll: 1,
+				pagination: false
+			}
 		}
 	},
 	mounted () {
-		setInterval( () => {
-			if (this.showBanner<2) this.showBanner++
-			else this.showBanner = 0
-		}, 5000)
+
 	},
 	methods: {
-		getUrl () {
-			return require('../../assets/image/' + this.banners[this.showBanner])
-		},
 		setBanner (indx) {
-			this.showBanner = indx
+			this.$refs.slider.$emit('slideTo', indx)
+		},
+		slide (slide) {
+			this.showBanner = slide.currentPage
 		}
 	}
 }
@@ -103,7 +120,7 @@ export default {
 				z-index: 1;
 			}
 			.img-phone{
-				height: 500px;
+				height: 100%
 			}
 		}
 		.up{

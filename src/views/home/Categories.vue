@@ -11,6 +11,9 @@
 					<div slot="loading">loading...</div>
 				</slider>
 			</div>
+			<div class="inputs-container">
+				Aqui es el betulio
+			</div>
 		</div>
 	</v-container>
 </template>
@@ -74,6 +77,10 @@ export default {
 			border-radius: 3px;
 			z-index: 2;
 		}
+	}
+	.inputs-container{
+		padding: 15px;
+
 	}
 }
 </style>

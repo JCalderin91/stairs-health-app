@@ -1,5 +1,5 @@
 <template>
-  <v-card id="card"> 
+  <v-card id="card" :to="{name:'clinic'}"> 
     <v-img
       class="white--text align-end"
       height="200px"
@@ -15,7 +15,6 @@
 
     <v-card-text class="text--primary">
       <h4>Treatment Mane</h4>
-
       <h5>Teeament descrioption</h5>
     </v-card-text>
 
