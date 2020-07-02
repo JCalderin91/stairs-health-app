@@ -5,14 +5,43 @@
 				<slider ref="slider" :options="options">
 					<!-- slideritem wrapped package with the components you need -->
 					<slideritem v-for="(item,index) in someList" style="width:14%" :key="index">
-						<category :active="index==2?true:false" :img="item.img" :title="item.title" />
+						<category :active="index==1?true:false" :img="item.img" :title="item.title" />
 					</slideritem>
 					<!-- Customizable loading -->
 					<div slot="loading">loading...</div>
 				</slider>
 			</div>
 			<div class="inputs-container">
-				Aqui es el betulio
+				<v-row>
+					<v-col :md="4">
+						<v-text-field
+							outlined
+							rounded
+							dense
+							placeholder="Search"
+							append-icon="mdi-search"
+						></v-text-field>
+					</v-col>
+					<v-col :md="4">
+						<v-text-field
+							outlined
+							dense
+							rounded
+							placeholder="Zip code or City"
+							append-icon="mdi-map-marker"
+						></v-text-field>
+					</v-col>
+					<v-col :md="4">
+						<v-range-slider
+							class="mt-5"
+							v-model="range"
+							min="100"
+							max="1000"
+							thumb-label="always"
+							:thumb-size="24"
+						></v-range-slider>
+					</v-col>
+				</v-row>
 			</div>
 		</div>
 	</v-container>
@@ -24,28 +53,29 @@ export default {
 	data () {
 		return {
 			//data list [array]
+			range: [125,587],
 			someList:[
 				{
-					img: 'fisioterapeuta.svg',
-					title: 'slide1'
-				},{
-					img: 'teeth.svg',
-					title: 'Odontology'
-				},{
-					img: 'psychiatry.svg',
-					title: 'Phichiatry'
-				},{
-					img: 'bone.svg',
-					title: 'Traumatology'
+					img: 'ophthalmology.svg',
+					title: 'Ophthalmology'
 				},{
 					img: 'heartbeat.svg',
 					title: 'Cardiology'
 				},{
+					img: 'psychiatry.svg',
+					title: 'Phichiatry'
+				},{
+					img: 'teeth.svg',
+					title: 'Odontology'
+				},{
+					img: 'pacifier.svg',
+					title: 'Pediatric'
+				},{
+					img: 'bone.svg',
+					title: 'Traumatology'
+				},{
 					img: 'rinon.svg',
 					title: 'Nephrology'
-				},{
-					img: 'utero (1).svg',
-					title: 'slide7'
 				}
 			],
 			//Slider configuration [obj]
@@ -53,6 +83,7 @@ export default {
 				currentPage: 0,
 				infinite: 7,
 				slidesToScroll: 7,
+				pagination: false,
 			}
 		}
 	},
@@ -63,7 +94,7 @@ export default {
 	}
 }
 </script>
-<style scope lang="scss">
+<style scoped lang="scss">
 #categories{
 	position: relative;
 	.categories-container{
@@ -79,8 +110,7 @@ export default {
 		}
 	}
 	.inputs-container{
-		padding: 15px;
-
+		padding: 0 15px;
 	}
 }
 </style>

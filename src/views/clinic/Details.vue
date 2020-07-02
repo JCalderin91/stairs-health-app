@@ -19,7 +19,7 @@
 						Choose you insurance
 					</div>
 					<div class="icon">
-						<img src="@/assets/image/virus.svg" />
+						<img src="@/assets/image/surface1.svg" />
 					</div>
 				</div>
 			</div>	

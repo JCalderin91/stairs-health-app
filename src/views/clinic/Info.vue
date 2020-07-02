@@ -29,7 +29,7 @@
 	</v-container>
 </template>
 
-<style scope lang="scss">
+<style scoped lang="scss">
 	.main-img{
 		z-index:5;
 	}

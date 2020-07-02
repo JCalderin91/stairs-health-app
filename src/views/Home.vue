@@ -76,7 +76,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 	.hero{
 		height: calc(100vh - 40px);
 		position: relative;

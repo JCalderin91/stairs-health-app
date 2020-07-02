@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope >
+<style lang="scss" scoped >
 *{
   font-family: 'Raleway', sans-serif; 
   color: #444;

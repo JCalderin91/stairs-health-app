@@ -76,7 +76,8 @@ export default {
 				currentPage: 0,
 				infinite: 1,
 				slidesToScroll: 1,
-				pagination: false
+				pagination: false,
+				loop: true
 			}
 		}
 	},
@@ -94,7 +95,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 	.hero{
 		height: calc(100vh - 40px);
 		position: relative;

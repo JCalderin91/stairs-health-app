@@ -39,7 +39,7 @@
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .container-logo,
 .logo-app{
   height: 100%;
