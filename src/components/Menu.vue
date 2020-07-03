@@ -1,7 +1,9 @@
 <template>
-  <v-app-bar hide-on-scroll color="primary" :class="{'pb-10':home}" app>
-    <v-toolbar-title class="container-logo" :to="{name:'home'}">
-      <img class="logo-app" src="@/assets/logo-white.png" alt="">
+  <v-app-bar color="primary"  app>
+    <v-toolbar-title class="container-logo">
+      <router-link tag="a" :to="{name:'home'}">
+        <img class="logo-app" src="@/assets/logo-white.png" alt="">
+      </router-link>  
     </v-toolbar-title>
     <v-spacer></v-spacer>
 
@@ -18,7 +20,7 @@
     <v-spacer></v-spacer>
 
     <div class="menu-nav-bar">
-      <span>Login</span>
+      <span @click="login">Login</span>
       <span>|</span>
       <span>Register</span>
     </div>
@@ -35,6 +37,11 @@
       home () {
         return this.$route.name !== 'home'
       }
+    },
+    methods: {
+      login () {
+        this.$emit('toggleDialog', true)
+      }
     }
   }
 </script>
@@ -46,6 +53,7 @@
 }
 .menu-nav-bar{
   span{
+    cursor: pointer;
     padding: 3px 5px;
     margin: 0 3px;
     color: white;

@@ -7,16 +7,16 @@
 				<v-col :md="6" class="d-flex align-center flex-column">
 					<img class="img-logo" src="@/assets/image/logo-full-white.png" alt="">
 					<h4 class="py-5 up white--text">Become a Stairs member</h4>
-					<ul class="up white--text">
-						<li>Get control of your healtcare y One Step.</li>
-						<li>Multiple Telehealth visits every year.</li>
-						<li>Your medical records saved in your system.</li>
-						<li>We will guide you and help you find the best <br> quality and cost-effective care.</li>
+					<ul class="up white--text become-list">
+						<li><i class="fa fa-circle"></i>Get control of your healtcare y One Step.</li>
+						<li><i class="fa fa-circle"></i>Multiple Telehealth visits every year.</li>
+						<li><i class="fa fa-circle"></i>Your medical records saved in your system.</li>
+						<li><i class="fa fa-circle"></i>We will guide you and help you find the best <br> quality and cost-effective care.</li>
 
 					</ul>
 				</v-col>
 				<v-col :md="6">
-					<div style="width:100%;margin:20px auto;height:400px">
+					<div style="width:100%;margin:20px auto;height:500px">
 						<slider ref="slider" :options="options" @slide="slide">
 							<!-- slideritem wrapped package with the components you need -->
 							<slideritem>
@@ -38,16 +38,16 @@
 					<v-container>
 						<div class="social-icons">
 							<a href="#">
-								<img class="icon" src="@/assets/icons/facebook-f.svg" alt="">
+								<i class="fa fa-facebook"></i>
 							</a>
 							<a href="#">
-								<img class="icon" src="@/assets/icons/twitter.svg" alt="">
+								<i class="fa fa-twitter"></i>
 							</a>
 							<a href="#">
-								<img class="icon" src="@/assets/icons/instagram.svg" alt="">
+								<i class="fa fa-instagram"></i>
 							</a>
 							<a href="#">
-								<img class="icon" src="@/assets/icons/globe-americas.svg" alt="">
+								<i class="fa fa-globe"></i>
 							</a>
 						</div>
 					</v-container>
@@ -123,6 +123,17 @@ export default {
 			.img-phone{
 				height: 100%
 			}
+			.become-list{
+				li{
+					list-style: none;
+					padding: 3px;
+					margin: 3px 0;
+					i{
+						font-size: .8rem;
+						margin-right: 10px;
+					}
+				}
+			}
 		}
 		.up{
 			z-index: 1;
@@ -130,10 +141,9 @@ export default {
 		.social-icons{
 			a{
 				padding: 5px 8px;
-				.icon{
-					width: 1.2rem;
-					height: 1.2rem;
-					filter: invert(1);
+				i{
+					color: white;
+					font-size: 1.5rem;
 				}
 			}
 		}

@@ -7,7 +7,9 @@
 				<v-col :md="6">
 					<details-clinic />
 				</v-col>
-				<v-col :md="6">2</v-col>
+				<v-col :md="6">
+					<right-panel />
+				</v-col>
 			</v-row>
 		</v-container>
 	</div>
@@ -17,9 +19,10 @@
 	import Info from './Info'
 	import Treatment from './Treatment'
 	import DetailsClinic from './Details'
+	import RightPanel from './RightPanel'
 	export default {
 		components: {
-			Info, Treatment, DetailsClinic
+			Info, Treatment, DetailsClinic, RightPanel
 		}
 	}
 </script>

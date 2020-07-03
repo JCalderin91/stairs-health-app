@@ -1,6 +1,6 @@
 <template>
 	<v-container>
-		<h1 class="title">Premium Features</h1>
+		<h1 class="title py-3">Premium Features</h1>
 		<v-row>
 			<v-col :md="3">
 				<v-card id="card"> 

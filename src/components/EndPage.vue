@@ -15,15 +15,15 @@
 					<v-col :md="3">
 						<ul class="list-group">
 							<li class="list-item">
-								<img src="@/assets/icons/facebook-f.svg" alt="">
+								<i class="fa fa-facebook"></i>
 								<span>Facebook</span>
 							</li>
 							<li class="list-item">
-								<img src="@/assets/icons/twitter.svg" alt="">
+								<i class="fa fa-twitter"></i>
 								<span>Twitter</span>
 							</li>
 							<li class="list-item">
-								<img src="@/assets/icons/instagram.svg" alt="">
+								<i class="fa fa-instagram"></i>
 								<span>Instagram</span>
 							</li>
 						</ul>
@@ -66,11 +66,8 @@ footer{
 	.list-group{
 		.list-item{
 			list-style: none;
-			img{
-				height: 1rem;
-				width: 1rem;
-				filter: invert(1);
-				margin: 0 5px;
+			i{
+				width: 1.5rem;
 			}
 		}
 	}
@@ -81,6 +78,7 @@ footer{
 .end{
 	background: #0BBBEF;
 	color: white;
+	font-size: .8rem;
 	.end-between{
 		display: flex;
 		justify-content: space-between;

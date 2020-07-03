@@ -19,7 +19,7 @@
 							rounded
 							dense
 							placeholder="Search"
-							append-icon="mdi-search"
+							append-icon="mdi-magnify"
 						></v-text-field>
 					</v-col>
 					<v-col :md="4">

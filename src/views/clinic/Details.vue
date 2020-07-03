@@ -13,7 +13,8 @@
 			<p>Apply Discount</p>
 		</v-col>
 		<v-col :md="12" align="center">
-			<div class="sh-button">
+
+			<div class="sh-button my-3">
 				<div class="sub-container">
 					<div class="text">
 						Choose you insurance
@@ -23,9 +24,82 @@
 					</div>
 				</div>
 			</div>	
+			<br>
+			<table class="table w-100">
+				<thead>
+					<tr>
+						<th>Ancillary Services</th>
+						<th>CPT/HCPS</th>
+						<th>Charge</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="(item, key) in tabla_1" :key="key">
+						<td>{{item.ac}}re</td>
+						<td class="text-center">{{item.cpt}}</td>
+						<td class="text-center">$ {{item.charge}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="separador"></div>
+
+			<table class="table w-100">
+				<thead>
+					<tr>
+						<th>Charges</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="(item, key) in tabla_2" :key="key">
+						<td>{{item.charges}}</td>
+						<td class="text-center">$ {{item.price}}</td>
+					</tr>
+				</tbody>
+			</table>
 		</v-col>
 	</v-row>
 </template>
+
+<script>
+	export default {
+		data: () => ({
+			tabla_1: [
+				{
+					ac: 'Primari diagnostic procedure',
+					cpt: 'XXX',
+					charge: '100'
+				},{
+					ac: 'anestesia',
+					cpt: 'XXX',
+					charge: '100'
+				},{
+					ac: 'Pathology',
+					cpt: 'XXX',
+					charge: '100'
+				},{
+					ac: 'Phisician services',
+					cpt: 'XXX',
+					charge: '100'
+				}
+			],
+			tabla_2: [
+				{
+					charges: 'Discounted Cash Price',
+					price: '100',
+				},{
+					charges: 'Minimum Negociate Charge',
+					price: '100',
+				},{
+					charges: 'Maximum Negociate Charge',
+					price: '100',
+				}
+			],
+
+		})
+	}
+</script>
 
 <style scoped lang="scss">
 .info-box{
@@ -64,4 +138,14 @@
 		}
 	}
 }
+.table{
+	margin: 15px 5px;
+	td{
+		padding: 5px;
+	}
+}
+.w-100{
+	width:100%;
+}
+
 </style>
