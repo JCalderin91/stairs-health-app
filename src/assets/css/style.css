@@ -14,3 +14,19 @@
 	max-width: 1400px;
 	margin: 0 auto;
 }
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar {
+  background: #11111177;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00cae9;
+}
+
+::selection {
+  background: var(--color);
+}

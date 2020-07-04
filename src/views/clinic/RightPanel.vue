@@ -20,7 +20,7 @@
 			</div>
 			<br>
 			<div class="d-flex justify-center">
-				<sh-button text="Call Us" img="phone.svg" />
+				<sh-button invert text="Call Us" img="phone.svg" />
 			</div>
 		</div>
 	</div>

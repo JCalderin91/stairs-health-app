@@ -5,7 +5,7 @@
 				{{text}}
 			</div>
 			<div v-if="this.img" class="icon">
-				<img :src="getImg()" />
+				<img :src="getImg()" :class="{'invert': invert}"/>
 			</div>
 		</div>
 	</div>	
@@ -19,6 +19,10 @@
 			},
 			img: {
 				type: String,
+				default: false
+			},
+			invert: {
+				type: Boolean, 
 				default: false
 			}
 		},
@@ -34,6 +38,7 @@
 
 <style scoped lang="scss">
 	.sh-button{
+		cursor: pointer;
 		display: inline-block;
 		border-radius: 15px;
 		padding: 8px 25px;
@@ -58,6 +63,9 @@
 					height: 100%;
 				}
 			}
+		}
+		.invert{
+			filter: invert(1)
 		}
 	}
 </style>

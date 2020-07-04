@@ -1,19 +1,23 @@
 <template>
-	<v-row >
-		<v-col :sm="12">
+	<section>
+		<div>
 			<v-text-field
-				label="Speciality"
+				:label="`Specialities: ${specialitiesCount}`"
 				outlined
 				rounded
 				append-icon="mdi-magnify"
 				v-model="specialitySearch"
 			></v-text-field>
-		</v-col>
-		<v-col :md="4" v-for="(speciality, key) in filterSpecialities" :key="key">
-			<category :active="speciality.title==='Cardiology'" :img="speciality.img" :title="speciality.title" />
-		</v-col>
-		<h6 v-if="filterSpecialities.length===0" class="text-center d-block">No hay resultados</h6>
-	</v-row>
+		</div>
+		<div>
+			<v-row class="list-specialities">
+				<v-col  :md="4" v-for="(speciality, key) in filterSpecialities" :key="key">
+					<category :active="speciality.title==='Cardiology'" :img="speciality.img" :title="speciality.title" />
+				</v-col>
+				<v-col :md="12" filterSpecialities class="text-center d-block">No matches found</v-col>
+			</v-row>
+		</div>
+	</section>
 </template>
 
 <script>
@@ -34,7 +38,17 @@
 				return this.specialitySearch.length === 0 
 					? this.specialities
 					: this.specialities.filter(category => category.title.toUpperCase().includes(this.specialitySearch.toUpperCase()))
+			},
+			specialitiesCount () {
+				return this.filterSpecialities.length
 			}
 		}
 	}
 </script>
+
+<style scoped lang="scss">
+	.list-specialities{
+		height: 600px;
+		overflow: auto;
+	}
+</style>

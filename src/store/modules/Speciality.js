@@ -20,6 +20,24 @@ export default {
         },{
           img: 'Traumatology.svg',
           title: 'Traumatology'
+        },{ 
+          img: 'Geriatrics.svg',
+          title: 'Geriatrics'
+        },{
+          img: 'Gynecology.svg',
+          title: 'Gynecology'
+        },{
+          img: 'Oncology.svg',
+          title: 'Oncology'
+        },{
+          img: 'Pharmacology.svg',
+          title: 'Pharmacology'
+        },{
+          img: 'Radiology.svg',
+          title: 'Radiology'
+        },{
+          img: 'Surgery.svg',
+          title: 'Surgery'
         },{
           img: 'Nephrology.svg',
           title: 'Nephrology'

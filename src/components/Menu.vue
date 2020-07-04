@@ -14,7 +14,6 @@
         <span>Become a Member</span>
         <span>For Providers</span>
         <span>Contact Us</span>
-        <span>{{$route.name}}</span>
       </div>
 
 
@@ -22,7 +21,7 @@
 
       <div class="menu-nav-bar">
         <span @click="login">Login</span>
-        <span>|</span>
+        <span class="layer">|</span>
         <span>Register</span>
       </div>
     </div>
@@ -49,9 +48,9 @@
 
 <style scoped lang="scss">
 #menu{
+  z-index: 30;
   .container{
     height: 100%;
-    z-index: 30;
     .container-logo,
     .logo-app{
       height: 100%;
@@ -62,6 +61,16 @@
         padding: 3px 5px;
         margin: 0 3px;
         color: white;
+        position: relative;
+        &.layer::before{
+          content: '';
+          background: #04D5F5;
+          position: absolute;
+          top: -19px;
+          left: 0px;
+          height: 64px;
+          width: 10vw;
+        }
       }
     }
   }
