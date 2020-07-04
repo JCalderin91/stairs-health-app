@@ -3,61 +3,62 @@
 		<section class="hero">
 			<img src="@/assets/image/hero.png" alt="" class="img-hero">
 			<img src="@/assets/image/wave.svg" alt="" class="img-hero-wave">
-			<v-row class="container-hero" align="center">
-				<v-col :md="6" class="d-flex align-center flex-column">
-					<img class="img-logo" src="@/assets/image/logo-full-white.png" alt="">
-					<h4 class="py-5 up white--text">Become a Stairs member</h4>
-					<ul class="up white--text become-list">
-						<li><i class="fa fa-circle"></i>Get control of your healtcare y One Step.</li>
-						<li><i class="fa fa-circle"></i>Multiple Telehealth visits every year.</li>
-						<li><i class="fa fa-circle"></i>Your medical records saved in your system.</li>
-						<li><i class="fa fa-circle"></i>We will guide you and help you find the best <br> quality and cost-effective care.</li>
+			<div class="container">
+				<v-row class="container-hero" align="center">
+					<v-col :md="6" class="d-flex align-center flex-column">
+						<img class="img-logo" src="@/assets/image/logo-full-white.png" alt="">
+						<h4 class="py-5 up white--text">Become a Stairs member</h4>
+						<ul class="up white--text become-list">
+							<li><i class="fa fa-circle"></i>Get control of your healtcare y One Step.</li>
+							<li><i class="fa fa-circle"></i>Multiple Telehealth visits every year.</li>
+							<li><i class="fa fa-circle"></i>Your medical records saved in your system.</li>
+							<li><i class="fa fa-circle"></i>We will guide you and help you find the best <br> quality and cost-effective care.</li>
 
-					</ul>
-				</v-col>
-				<v-col :md="6">
-					<div style="width:100%;margin:20px auto;height:500px">
-						<slider ref="slider" :options="options" @slide="slide">
-							<!-- slideritem wrapped package with the components you need -->
-							<slideritem>
-								<img class="img-phone" src="@/assets/image/banner-gif-1.png" alt="">
-							</slideritem>
-							<slideritem>
-								<img class="img-phone" src="@/assets/image/banner-gif-2.png" alt="">
-							</slideritem>
-							<slideritem>
-								<img class="img-phone" src="@/assets/image/banner-gif-3.png" alt="">
-							</slideritem>
-							<!-- Customizable loading -->
-							<div slot="loading">Cargando...</div>
-						</slider>
-					</div>					
-				</v-col>
-				<v-col :sm="12" class="up">
-					<v-container>
-						<div class="social-icons">
-							<a href="#">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-twitter"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-instagram"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-globe"></i>
-							</a>
-						</div>
-					</v-container>
-				</v-col>
-				<v-col :sm="12" class="up d-flex justify-center">
-					<div class="banner-dots">
-						<div @click="setBanner(i-1)" :class="{'active': (i-1)===showBanner}" class="dot" v-for="i in 3" :key="i"></div>
-						</div>
-				</v-col>
-			</v-row>
-			
+						</ul>
+					</v-col>
+					<v-col :md="6">
+						<div style="width:100%;margin:20px auto;height:500px">
+							<slider ref="slider" :options="options" @slide="slide">
+								<!-- slideritem wrapped package with the components you need -->
+								<slideritem>
+									<img class="img-phone" src="@/assets/image/banner-gif-1.png" alt="">
+								</slideritem>
+								<slideritem>
+									<img class="img-phone" src="@/assets/image/banner-gif-2.png" alt="">
+								</slideritem>
+								<slideritem>
+									<img class="img-phone" src="@/assets/image/banner-gif-3.png" alt="">
+								</slideritem>
+								<!-- Customizable loading -->
+								<div slot="loading">Cargando...</div>
+							</slider>
+						</div>					
+					</v-col>
+					<v-col :sm="12" class="up">
+						<v-container>
+							<div class="social-icons">
+								<a href="#">
+									<i class="fa fa-facebook"></i>
+								</a>
+								<a href="#">
+									<i class="fa fa-twitter"></i>
+								</a>
+								<a href="#">
+									<i class="fa fa-instagram"></i>
+								</a>
+								<a href="#">
+									<i class="fa fa-globe"></i>
+								</a>
+							</div>
+						</v-container>
+					</v-col>
+					<v-col :sm="12" class="up d-flex justify-center">
+						<div class="banner-dots">
+							<div @click="setBanner(i-1)" :class="{'active': (i-1)===showBanner}" class="dot" v-for="i in 3" :key="i"></div>
+							</div>
+					</v-col>
+				</v-row>
+			</div>			
 		</section>
 	</div>
 </template>
@@ -95,8 +96,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 	.hero{
-		min-height: calc(100vh - 40px);
 		position: relative;
 		.img-hero{
 			position: absolute;
