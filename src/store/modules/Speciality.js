@@ -30,6 +30,9 @@ export default {
           img: 'Oncology.svg',
           title: 'Oncology'
         },{
+        img: 'Psychiatry.svg',
+          title: 'Psychiatry'
+        },{
           img: 'Pharmacology.svg',
           title: 'Pharmacology'
         },{

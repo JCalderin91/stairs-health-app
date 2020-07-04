@@ -20,7 +20,7 @@
 						Choose you insurance
 					</div>
 					<div class="icon">
-						<img src="@/assets/image/surface1.svg" />
+						<img src="@/assets/image/surface.svg" />
 					</div>
 				</div>
 			</div>	

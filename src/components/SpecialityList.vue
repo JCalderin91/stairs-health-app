@@ -14,7 +14,7 @@
 				<v-col  :md="4" v-for="(speciality, key) in filterSpecialities" :key="key">
 					<category :active="speciality.title==='Cardiology'" :img="speciality.img" :title="speciality.title" />
 				</v-col>
-				<v-col :md="12" filterSpecialities class="text-center d-block">No matches found</v-col>
+				<v-col v-if="filterSpecialities.length===0" :md="12"  class="text-center d-block">No matches found</v-col>
 			</v-row>
 		</div>
 	</section>

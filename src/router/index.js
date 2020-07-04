@@ -6,6 +6,9 @@ Vue.use(Router);
 export default new Router({
   linkActiveClass: 'active',
   mode: 'history',
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  },
   routes: [
     {
       path: '/',

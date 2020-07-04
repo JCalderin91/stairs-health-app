@@ -2,10 +2,10 @@
 	<v-container id="categories">
 		<div class="categories-container">
 			<div class="categories-body">
-				<div class="slider-controller left-controller">
+				<div @click="slidePrev()" class="slider-controller left-controller">
 					<i class="fa fa-chevron-left"></i>
 				</div>
-				<slider class="slider" ref="slider" :options="options">
+				<slider class="slider" ref="sliderSpeciality" :options="options">
 					<!-- slideritem wrapped package with the components you need -->
 					<slideritem v-for="(item,index) in specialities" style="width:14%" :key="index">
 						<category :active="index==1?true:false" :img="item.img" :title="item.title" />
@@ -13,7 +13,7 @@
 					<!-- Customizable loading -->
 					<div slot="loading">loading...</div>
 				</slider>
-				<div class="slider-controller right-controller">
+				<div @click="slideNext()" class="slider-controller right-controller">
 					<i class="fa fa-chevron-right"></i>
 				</div>
 			</div>
@@ -71,6 +71,14 @@ export default {
 				slidesToScroll: 7,
 				pagination: false,
 			}
+		}
+	},
+	methods: {
+		slideNext () {
+			this.$refs.sliderSpeciality.$emit('slideNext')
+		},
+		slidePrev () {
+			this.$refs.sliderSpeciality.$emit('slidePre')
 		}
 	},
 	computed: {

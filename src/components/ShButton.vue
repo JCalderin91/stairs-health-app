@@ -18,7 +18,6 @@
 				type: String
 			},
 			img: {
-				type: String,
 				default: false
 			},
 			invert: {
