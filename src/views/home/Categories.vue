@@ -2,14 +2,20 @@
 	<v-container id="categories">
 		<div class="categories-container">
 			<div class="categories-body">
-				<slider ref="slider" :options="options">
+				<div class="slider-controller left-controller">
+					<i class="fa fa-chevron-left"></i>
+				</div>
+				<slider class="slider" ref="slider" :options="options">
 					<!-- slideritem wrapped package with the components you need -->
-					<slideritem v-for="(item,index) in someList" style="width:14%" :key="index">
+					<slideritem v-for="(item,index) in specialities" style="width:14%" :key="index">
 						<category :active="index==1?true:false" :img="item.img" :title="item.title" />
 					</slideritem>
 					<!-- Customizable loading -->
 					<div slot="loading">loading...</div>
 				</slider>
+				<div class="slider-controller right-controller">
+					<i class="fa fa-chevron-right"></i>
+				</div>
 			</div>
 			<div class="inputs-container">
 				<v-row>
@@ -20,6 +26,7 @@
 							dense
 							placeholder="Search"
 							append-icon="mdi-magnify"
+							class="mx-10"
 						></v-text-field>
 					</v-col>
 					<v-col :md="4">
@@ -29,10 +36,12 @@
 							rounded
 							placeholder="Zip code or City"
 							append-icon="mdi-map-marker"
+							class="mx-10"
 						></v-text-field>
 					</v-col>
 					<v-col :md="4">
 						<v-range-slider
+							label="Price range"
 							class="mt-5"
 							v-model="range"
 							min="100"
@@ -48,36 +57,13 @@
 </template>
 <script>
 import { slider, slideritem } from 'vue-concise-slider'
+import {mapState} from 'vuex'
 import Category from '@/components/Category'
 export default {
 	data () {
 		return {
 			//data list [array]
 			range: [125,587],
-			someList:[
-				{
-					img: 'ophthalmology.svg',
-					title: 'Ophthalmology'
-				},{
-					img: 'heartbeat.svg',
-					title: 'Cardiology'
-				},{
-					img: 'psychiatry.svg',
-					title: 'Phichiatry'
-				},{
-					img: 'teeth.svg',
-					title: 'Odontology'
-				},{
-					img: 'pacifier.svg',
-					title: 'Pediatric'
-				},{
-					img: 'bone.svg',
-					title: 'Traumatology'
-				},{
-					img: 'rinon.svg',
-					title: 'Nephrology'
-				}
-			],
 			//Slider configuration [obj]
 			options: {
 				currentPage: 0,
@@ -86,6 +72,11 @@ export default {
 				pagination: false,
 			}
 		}
+	},
+	computed: {
+		...mapState({
+			specialities: ({Speciality}) => Speciality.all
+		})
 	},
 	components: {
 		slider,
@@ -97,16 +88,35 @@ export default {
 <style scoped lang="scss">
 #categories{
 	position: relative;
+	z-index: 10;
 	.categories-container{
 		background-color: #F5F5F5;
 		margin-top: 0;
+		transform: translateY(-20px);
 		.categories-body{
 			position: relative;
-			transform: translateY(-28px);
-			margin: 0 15px;
+			transform: translateY(-15px);
+			margin: 10px 15px;
 			background-color: white;
-			border-radius: 3px;
-			z-index: 2;
+			z-index: 10;
+			display: flex;
+			height: 170px;
+			border-radius: 5px;
+			overflow: hidden;
+			box-shadow: 0 1px 6px -2px #0000006b;
+			.slider{
+				display: block;
+			}
+			.slider-controller{
+				height: 100%;
+				background: #f5f5f5;
+				display: flex;
+				align-items: center;
+				padding: 1.2rem;
+				font-size: 1.2rem;
+				color: #00cae9;
+				cursor: pointer;
+			}
 		}
 	}
 	.inputs-container{

@@ -31,8 +31,7 @@
 							<!-- Customizable loading -->
 							<div slot="loading">Cargando...</div>
 						</slider>
-					</div>
-					
+					</div>					
 				</v-col>
 				<v-col :sm="12" class="up">
 					<v-container>
@@ -97,7 +96,7 @@ export default {
 
 <style lang="scss" scoped>
 	.hero{
-		height: calc(100vh - 40px);
+		min-height: calc(100vh - 40px);
 		position: relative;
 		.img-hero{
 			position: absolute;
@@ -154,12 +153,14 @@ export default {
 				width: 1rem;
 				background-color: #fff;
 				border-radius: 50%;
-				margin: 5px;
+				margin: 5px 8px;
 				cursor: pointer;
 				transition: all .3s ease-in-out;
+				opacity: .7;
 				&.active,
 				&:hover{
-					transform: scale(1.4)
+					transform: scale(1.4);
+					opacity: 1;
 				}
 			}
 		}

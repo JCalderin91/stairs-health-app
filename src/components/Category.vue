@@ -73,9 +73,6 @@ export default {
     }
     &.active{
       border: none;
-      .image{
-        filter: invert(1);
-      }
     }
   }
 }

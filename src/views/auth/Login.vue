@@ -19,15 +19,22 @@
 			<v-text-field
 				label="Email Adress"
 				outlined
+				hide-details
 				prepend-inner-icon="mdi-mail"
+				class="mb-3"
 				v-model="credentials.mail"
 			></v-text-field>
 			<v-text-field
 				label="Password"
 				outlined
+				hide-details
 				prepend-inner-icon="mdi-lock"
 				v-model="credentials.password"
 			></v-text-field>
+			<v-checkbox
+				v-model="credentials.checkbox"
+				label="Remember me"
+			></v-checkbox>
 			<div class="d-flex justify-center">
 				<sh-button text="Log In" />
 			</div>

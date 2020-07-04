@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="primary"  app>
+  <v-app-bar id="menu" color="primary"  app>
     <v-toolbar-title class="container-logo">
       <router-link tag="a" :to="{name:'home'}">
         <img class="logo-app" src="@/assets/logo-white.png" alt="">
@@ -47,16 +47,19 @@
 </script>
 
 <style scoped lang="scss">
-.container-logo,
-.logo-app{
-  height: 100%;
-}
-.menu-nav-bar{
-  span{
-    cursor: pointer;
-    padding: 3px 5px;
-    margin: 0 3px;
-    color: white;
+#menu{
+  z-index: 30;
+  .container-logo,
+  .logo-app{
+    height: 100%;
+  }
+  .menu-nav-bar{
+    span{
+      cursor: pointer;
+      padding: 3px 5px;
+      margin: 0 3px;
+      color: white;
+    }
   }
 }
 </style>

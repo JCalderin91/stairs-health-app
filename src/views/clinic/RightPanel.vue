@@ -5,20 +5,7 @@
 			<div @click="panel=2" class="tabs-item" :class="{'active': panel===2}">Direct contact</div>
 		</div>
 		<br>
-		<v-row v-if="panel===1">
-			<v-col :sm="12">
-				<v-text-field
-					label="Speciality"
-					outlined
-					append-icon="mdi-magnify"
-					v-model="speciality"
-				></v-text-field>
-			</v-col>
-			<v-col :md="4" v-for="(category, key) in filterCategories" :key="key">
-				<category :active="category.title==='Cardiology'" :img="category.img" :title="category.title" />
-			</v-col>
-			<h6 v-if="filterCategories.length===0" class="text-center d-block">No hay resultados</h6>
-		</v-row>
+		<speciality-list v-if="panel===1" />
 		<div v-else>
 			<v-img src="@/assets/image/map.png" height="200"/>
 			<br>
@@ -40,41 +27,16 @@
 </template>
 
 <script>
-	import Category from '@/components/Category'
 	import Information from '@/components/Information'
 	import ShButton from '@/components/ShButton'
+	import SpecialityList from '@/components/SpecialityList'
 
 	export default {
 		components: {
-			Category, Information, ShButton
-		},
+			Information, ShButton, SpecialityList
+		},		
 		data: () => ({
-			speciality: '',
-			categories: [
-				{
-					img: 'ophthalmology.svg',
-					title: 'Ophthalmology'
-				},{
-					img: 'heartbeat.svg',
-					title: 'Cardiology'
-				},{
-					img: 'psychiatry.svg',
-					title: 'Phichiatry'
-				},{
-					img: 'teeth.svg',
-					title: 'Odontology'
-				},{
-					img: 'pacifier.svg',
-					title: 'Pediatric'
-				},{
-					img: 'bone.svg',
-					title: 'Traumatology'
-				},{
-					img: 'rinon.svg',
-					title: 'Nephrology'
-				}
-			],
-			panel: 1,
+			panel: 1
 		}),
 		computed:{
 			filterCategories () {
