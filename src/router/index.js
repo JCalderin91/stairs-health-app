@@ -19,6 +19,16 @@ export default new Router({
       path: '/clinic',
       name: 'clinic',
       component: () => import('@/views/clinic/Clinic')
+    },
+    {
+      path: '/treatment',
+      name: 'treatment',
+      component: () => import('@/views/treatment/Index')
+    },
+    {
+      path: '/your-spot',
+      name: 'your-spot',
+      component: () => import('@/views/your-spot/Index')
     }
   ]
 });

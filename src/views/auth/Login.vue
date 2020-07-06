@@ -1,6 +1,9 @@
 <template>
 	<div class="pa-4">
-		<h2 class="text-center py-4">Log In</h2>
+		<div class="logo-container px-10">
+			<v-img src="@/assets/image/logo_selecto_03.png" />	
+		</div>
+		<!-- <h2 class="text-center py-4">Log In</h2> -->
 		<div class="optional-logins">
 			<a href="">
 				<i class="fa fa-google"></i>
@@ -12,9 +15,9 @@
 				<i class="fa fa-apple"></i>
 			</a>
 		</div>
-		<p class="text-center">
-			<small >Log In auth</small>			
-		</p>
+		<div class="sub-title">
+			<p class="sub-title-text">Log In auth</p>
+		</div>
 		<div class="form">
 			<v-text-field
 				label="Email Adress"
@@ -64,6 +67,27 @@
 			padding: 3px 5px;
 			margin: 0 10px;
 			font-size: 1.5rem;
+		}
+	}
+	.sub-title{
+		border-top: 2px solid #f5f5f5;
+		margin-top: .5rem;
+		text-align: center;
+		.sub-title-text{
+			font-size: .8rem;
+			transform: translateY(-.9rem);
+			background-color: white;
+			display: inline-block;
+			padding: 0 .4rem;
+
+		}
+	}
+	.optional-logins{
+		a{
+			transition: color .3s ease-in-out;
+			&:hover{
+				color: #444;
+			}
 		}
 	}
 </style>

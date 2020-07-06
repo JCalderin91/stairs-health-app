@@ -1,9 +1,9 @@
 <template>
-  <div id="category">
-    <div class="image-container" :class="{'active primary': active, 'noHome': noHome}">
+  <div id="category" :class="{'hover': !noHover}">
+    <div class="image-container" :class="{'noHome': noHome}">
       <img class="image" :src="getImg()" :alt="title">
     </div>
-    <span class="text">{{title}}</span>
+    <span v-if="!noText" class="text">{{title}}</span>
   </div>
 </template>
 
@@ -13,8 +13,7 @@ export default {
   name: 'category',
   props: {
     title: {
-      type: String,
-      required: true
+      type: String
     },
     img: {
       type: String,
@@ -22,8 +21,17 @@ export default {
     },
     active: {
       type: Boolean,
-      deaful: false
+      default: false
+    },
+    noText: {
+      type: Boolean,
+      default: false
+    },
+    noHover: {
+      type: Boolean,
+      default: false
     }
+
   },
   data: () => ({
     //
@@ -44,12 +52,21 @@ export default {
 #category{
   // display: flex;
   // flex-direction: column;
-  cursor: pointer;
   margin: 20px auto 25px auto;
   text-align: center;
   transition: all .3s ease-in-out;
-  &:hover{
-    transform: scale(1.1)
+  &.hover{
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.05);
+      .image-container{
+        border: none;
+        background-color: #00cae9;
+        .image{
+          filter: invert(1);
+        }
+      }
+    }
   }
   .text{
     color: #000;
@@ -62,7 +79,7 @@ export default {
     padding: 20px;
     border-radius: 50%;
     border: 2px solid #888;
-    margin: 0 auto;
+    margin: 0 auto;    
     &.noHome{
       height: 100px !important;
       width: 100px !important;
@@ -70,9 +87,6 @@ export default {
     .image{
       width: 100%;
       height: 100%;
-    }
-    &.active{
-      border: none;
     }
   }
 }

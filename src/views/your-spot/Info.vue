@@ -8,7 +8,7 @@
 				<h1 class="title-clinic">Clinic Domenic</h1>	
 				<information />	
 				<div class="button d-flex justify-end">
-					<sh-button :to="{name:'your-spot'}" text="Save your Spot" img="calendario-3.svg" />				
+					<sh-button text="Save your Spot" img="calendario-3.svg" />				
 				</div>
 			</v-col>
 		</v-row>

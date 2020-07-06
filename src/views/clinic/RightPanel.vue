@@ -5,24 +5,26 @@
 			<div @click="panel=2" class="tabs-item" :class="{'active': panel===2}">Direct contact</div>
 		</div>
 		<br>
-		<speciality-list v-if="panel===1" />
-		<div v-else>
-			<v-img src="@/assets/image/map.png" height="200"/>
-			<br>
-			<information class="px-2" />
-			<br>
-			<div class="icons">
-				<i class="fa fa-envelope"></i>
-				<i class="fa fa-globe"></i>
-				<i class="fa fa-instagram"></i>
-				<i class="fa fa-twitter"></i>
-				<i class="fa fa-facebook"></i>
+		<transition name="fade" mode="out-in">
+			<speciality-list v-if="panel===1" />
+			<div v-else>
+				<v-img src="@/assets/image/map.png" height="200"/>
+				<br>
+				<information class="px-2" />
+				<br>
+				<div class="icons">
+					<i class="fa fa-envelope"></i>
+					<i class="fa fa-globe"></i>
+					<i class="fa fa-instagram"></i>
+					<i class="fa fa-twitter"></i>
+					<i class="fa fa-facebook"></i>
+				</div>
+				<br>
+				<div class="d-flex justify-center">
+					<sh-button invert text="Call Us" img="phone.svg" />
+				</div>
 			</div>
-			<br>
-			<div class="d-flex justify-center">
-				<sh-button invert text="Call Us" img="phone.svg" />
-			</div>
-		</div>
+		</transition>
 	</div>
 </template>
 

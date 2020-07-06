@@ -2,7 +2,9 @@
   <v-app>
     <main-menu @toggleDialog="dialog = $event" />
     <v-content>
-      <router-view/>
+      <transition name="fade" mode="out-in">
+        <router-view/>
+      </transition>
     </v-content>
     <end-page/>
     <v-dialog

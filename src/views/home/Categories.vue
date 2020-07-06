@@ -8,7 +8,7 @@
 				<slider class="slider" ref="sliderSpeciality" :options="options">
 					<!-- slideritem wrapped package with the components you need -->
 					<slideritem v-for="(item,index) in specialities" style="width:14%" :key="index">
-						<category :active="index==1?true:false" :img="item.img" :title="item.title" />
+						<category :img="item.img" :title="item.title" />
 					</slideritem>
 					<!-- Customizable loading -->
 					<div slot="loading">loading...</div>

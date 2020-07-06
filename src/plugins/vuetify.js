@@ -12,7 +12,8 @@ import {
   VIcon,
   VList,
   VProgressLinear,
-  VTextField
+  VTextField,
+  VDatePicker
 } from 'vuetify';
 
 Vue.use(Vuetify, {
@@ -27,7 +28,8 @@ Vue.use(Vuetify, {
     VIcon,
     VList,
     VProgressLinear,
-    VTextField
+    VTextField,
+    VDatePicker
   },
 });
 

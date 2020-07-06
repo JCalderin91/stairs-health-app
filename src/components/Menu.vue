@@ -69,7 +69,7 @@
           top: -19px;
           left: 0px;
           height: 64px;
-          width: 10vw;
+          width: 100vw;
         }
       }
     }

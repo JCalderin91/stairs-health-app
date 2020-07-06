@@ -8,7 +8,7 @@
 			</v-col>
 			<v-col :md="6" class="d-flex align-center justify-end">
 				<div class="d-flex justify-end aligns-center">
-					<sh-button  invert text="Compare sproviders" img="Arrows.svg" />
+					<sh-button invert text="Compare sproviders" img="Arrows.svg" />
 				</div>	
 			</v-col>
 		</v-row>

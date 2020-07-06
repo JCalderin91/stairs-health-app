@@ -1,5 +1,5 @@
 <template>
-	<div class="sh-button primary">
+	<div class="sh-button primary" @click="toRoute()">
 		<div class="sub-container">
 			<div class="text">
 				{{text}}
@@ -23,6 +23,9 @@
 			invert: {
 				type: Boolean, 
 				default: false
+			},
+			to: {
+				required: false
 			}
 		},
 		methods: {
@@ -30,6 +33,14 @@
 				return this.img 
 					? require('../assets/image/' + this.img)
 					: ''
+			},
+			toRoute () {
+				console.log(this.to)
+				if (typeof this.to === 'object') {
+					this.$router.push({name: this.to.name})
+				} else if (typeof this.to === 'otring') {
+					this.$router.push({name: this.to})
+				}
 			}
 		}
 	}
