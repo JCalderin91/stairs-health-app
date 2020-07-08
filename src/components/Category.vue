@@ -43,7 +43,7 @@ export default {
   }, 
   computed: {
     noHome () {
-      return this.$route.name !== 'home'
+      return this.$route.name !== 'home' && this.$route.name !== 'clinics'
     }
   }
 };
@@ -58,9 +58,8 @@ export default {
   &.hover{
     cursor: pointer;
     &:hover{
-      transform: scale(1.05);
       .image-container{
-        border: none;
+        border: 2px solid #00cae9;
         background-color: #00cae9;
         .image{
           filter: invert(1);

@@ -13,22 +13,32 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/home/Home')
+      component: () => import('@/views/home/Home.vue')
     },
     {
       path: '/clinic',
       name: 'clinic',
-      component: () => import('@/views/clinic/Clinic')
+      component: () => import('@/views/clinic/Clinic.vue')
     },
     {
       path: '/treatment',
       name: 'treatment',
-      component: () => import('@/views/treatment/Index')
+      component: () => import('@/views/treatment/Index.vue')
     },
     {
       path: '/your-spot',
       name: 'your-spot',
-      component: () => import('@/views/your-spot/Index')
+      component: () => import('@/views/your-spot/Index.vue')
+    },
+    {
+      path: '/clinics',
+      name: 'clinics',
+      component: () => import('@/views/clinics/Index.vue')
+    },
+    {
+      path: '/compare',
+      name: 'compare',
+      component: () => import('@/views/compare/Main.vue')
     }
   ]
 });

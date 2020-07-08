@@ -1,6 +1,6 @@
 <template>
 	<div class="mx-10">
-		<v-date-picker full-width v-model="date"></v-date-picker>
+		<v-date-picker  header-color="#e6e6e6" full-width v-model="date"></v-date-picker>
 		<div class="appointment">
 			<div class="title">Avaliable appointments</div>
 			<div v-for="appointment in appointments" :key="appointment.id" class="appointment-list">
@@ -17,12 +17,7 @@
 </template>
 
 <script>
-	import ShButton from '@/components/ShButton'
-
 	export default {
-		components: {
-			ShButton
-		},		
 		data: () => ({
 			date: null,
 			appointments: [
@@ -48,7 +43,7 @@
 				},
 				{
 					id: 5,
-					hour: '12:00 h',
+					hour: '13:00 h',
 					status: 'active'
 				}
 			]
@@ -106,4 +101,5 @@
 		color: white;
 		cursor: pointer;
 	}
+	
 </style>

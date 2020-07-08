@@ -35,10 +35,9 @@
 					: ''
 			},
 			toRoute () {
-				console.log(this.to)
 				if (typeof this.to === 'object') {
 					this.$router.push({name: this.to.name})
-				} else if (typeof this.to === 'otring') {
+				} else if (typeof this.to === 'string') {
 					this.$router.push({name: this.to})
 				}
 			}

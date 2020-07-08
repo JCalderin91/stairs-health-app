@@ -64,7 +64,7 @@
 <style scoped lang="scss">
 	.list-specialities{
 		max-height: 500px;
-		overflow: auto;
+		overflow	: auto;
 		display: flex;
 		flex-wrap: wrap;
 		.list-specialities-item{
