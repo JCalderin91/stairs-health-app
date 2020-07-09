@@ -105,7 +105,8 @@
 	.mapContainer{
 		overflow: hidden;
 		position: relative;
-		background-color: #f5f5f5;
+		// background-color: #f5f5f5;
+		max-height: 600px;
 		min-height: 600px;
 		.expand-button{
 			position: absolute;

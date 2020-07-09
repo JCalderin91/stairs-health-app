@@ -43,7 +43,10 @@
 <script>
 import SpecialitiesSlider from '@/components/SpecialitiesSlider'
 export default {
-	components: {SpecialitiesSlider}
+	components: {SpecialitiesSlider},
+	data: () => ({
+		range: [100,1000]
+	})
 }
 </script>
 <style scoped lang="scss">

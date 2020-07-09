@@ -19,7 +19,7 @@
 <script>
 	export default {
 		data: () => ({
-			date: null,
+			date: new Date().toISOString().substr(0, 10),
 			appointments: [
 				{
 					id: 1,
