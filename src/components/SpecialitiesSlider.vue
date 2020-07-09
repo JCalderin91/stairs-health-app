@@ -64,10 +64,10 @@ export default {
 		background-color: white;
 		z-index: 10;
 		display: flex;
-		height: 170px;
+		height: 200px;
 		border-radius: 5px;
 		overflow: hidden;
-		box-shadow: 0 1px 6px -2px #0000006b;
+		border: 1px solid rgb(226, 226, 226);
 		.slider{
 			display: block;
 		}

@@ -13,11 +13,11 @@
 				<information class="px-2" />
 				<br>
 				<div class="icons">
-					<i class="fa fa-envelope"></i>
-					<i class="fa fa-globe"></i>
-					<i class="fa fa-instagram"></i>
-					<i class="fa fa-twitter"></i>
-					<i class="fa fa-facebook"></i>
+					<a href=""><i class="fa fa-envelope"></i></a>
+					<a href=""><i class="fa fa-globe"></i></a>
+					<a href=""><i class="fa fa-instagram"></i></a>
+					<a href=""><i class="fa fa-twitter"></i></a>
+					<a href=""><i class="fa fa-facebook"></i></a>
 				</div>
 				<br>
 				<div class="d-flex justify-center">
@@ -65,9 +65,15 @@
 	}
 	.icons{
 		text-align: center;
-		font-size: 2.5rem;
-		i{
+		font-size: 1.5rem;
+		a{
+			transition: all .2s ease-in-out;
+			margin: 0rem .5rem;
+			color: #123959;
 			padding: .1rem .5rem;
+			&:hover{
+				color: #00cae9;
+			}
 		}
 	}
 </style>

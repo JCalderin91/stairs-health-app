@@ -1,10 +1,7 @@
 <template>
-	<div class="pa-4">
-		<div class="logo-container px-10">
-			<v-img src="@/assets/image/logo_selecto_03.png" />	
-		</div>
+	<div class="pa-10">
 		<!-- <h2 class="text-center py-4">Log In</h2> -->
-		<div class="optional-logins">
+		<div class="optional-logins mb-10 mt-3">
 			<a href="">
 				<i class="fa fa-google"></i>
 			</a>

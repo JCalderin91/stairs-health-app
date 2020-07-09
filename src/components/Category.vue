@@ -78,7 +78,8 @@ export default {
     padding: 20px;
     border-radius: 50%;
     border: 2px solid #888;
-    margin: 0 auto;    
+    margin: 0 auto;   
+    transition: all .3s ease-in-out; 
     &.noHome{
       height: 100px !important;
       width: 100px !important;
@@ -86,6 +87,7 @@ export default {
     .image{
       width: 100%;
       height: 100%;
+      transition: all .3s ease-in-out;
     }
   }
 }
