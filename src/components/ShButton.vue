@@ -40,6 +40,7 @@
 				} else if (typeof this.to === 'string') {
 					this.$router.push({name: this.to})
 				}
+				this.$emit('click')
 			}
 		}
 	}

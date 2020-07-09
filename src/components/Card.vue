@@ -1,16 +1,6 @@
 <template>
-  <v-hover v-slot:default="{ hover }">
-    <v-card id="card" :to="{name:'clinic'}">
+    <v-card id="card" >
       <v-img class="white--text align-end" height="200px" src="@/assets/image/0.png">
-        <v-expand-transition>
-          <div v-if="hover"
-            class="d-flex transition-fast-in-fast-out v-card--reveal display-3 white--text"
-            style="height: 100%;">
-            <div>
-
-            </div>
-          </div>
-        </v-expand-transition>
         <div class="badge">
           <div class="price">$ 200</div>
           <div class="text">Standar Charges</div>
@@ -24,7 +14,6 @@
       </v-card-text>
 
     </v-card>
-  </v-hover>
 </template>
 
 <script>
@@ -42,7 +31,11 @@ export default {
 #card {
   box-shadow: none;
   border: 1px solid rgb(226, 226, 226);
-
+  .text--primary{
+    h4{
+      text-decoration: none;
+    }
+  }
   .badge {
     position: absolute;
     top: 0;
@@ -66,17 +59,7 @@ export default {
     position: absolute;
     left: .5rem;
     bottom: .5rem;
-  }
-
-  .v-card--reveal {
-    background-color: #00cae9;
-    align-items: flex-end;
-    bottom: 0;
-    justify-content: flex-start;
-    opacity: .5;
-    position: absolute;
-    width: 100%;
-  }
+  }  
 }
 
 </style>

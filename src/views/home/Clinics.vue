@@ -2,7 +2,9 @@
 	<v-container>
 		<v-row wrap>
 			<v-col :md="4" v-for="i in 6" :key="i">
-				<card />
+				<router-link tag="div" :to="{name:'clinic'}">
+					<card  />
+				</router-link>
 			</v-col>
 		</v-row>
 		<div class="my-3 primary more" @click="$router.push({name:'clinics'})">

@@ -5,7 +5,7 @@ Vue.use(Router);
 
 export default new Router({
   linkActiveClass: 'active',
-  mode: 'history',
+  // mode: 'history',
   scrollBehavior () {
     return { x: 0, y: 0 }
   },

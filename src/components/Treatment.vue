@@ -1,5 +1,5 @@
 <template>
-	<v-card id="treatment" class="mb-4">
+	<v-card id="treatment" class="mb-5">
 		<v-row>
 			<v-col :md="3" class="pl-6">
 				<v-img height="200px" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.4)" src="@/assets/image/0.png">

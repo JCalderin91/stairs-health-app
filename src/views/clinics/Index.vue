@@ -3,44 +3,20 @@
 		<specialities-slider />
 		<div class="filters-container">
 			<div class="filter-item">
-				<v-text-field
-					outlined
-					rounded
-					dense
-					placeholder="Speciality"
-					append-icon="mdi-currency"
-					class="w-100"
-				></v-text-field>
+				<v-text-field hide-details outlined dense rounded placeholder="Speciality"
+									append-icon="mdi-currency-usd" class="w-100"></v-text-field>
 			</div>
 			<div class="filter-item">
-				<v-text-field
-					outlined
-					dense
-					rounded
-					placeholder="Treatment"
-					append-icon="mdi-map-marker"
-					class="w-100"
-				></v-text-field>
+				<v-text-field hide-details outlined dense rounded placeholder="Treatment"
+									append-icon="mdi-microphone" class="w-100"></v-text-field>
 			</div>
 			<div class="filter-item">
-				<v-text-field
-					outlined
-					rounded
-					dense
-					placeholder="location"
-					append-icon="mdi-map-marker"
-					class="w-100"
-				></v-text-field>
+				<v-text-field hide-details outlined dense rounded placeholder="Location"
+									append-icon="mdi-map-marker" class="w-100"></v-text-field>
 			</div>
 			<div class="filter-item">
-				<v-text-field
-					outlined
-					dense
-					rounded
-					placeholder="Price"
-					append-icon="mdi-map-marker"
-					class="w-100"
-				></v-text-field>
+				<v-text-field hide-details outlined dense rounded placeholder="Price"
+									append-icon="mdi-currency-usd" class="w-100"></v-text-field>
 			</div>
 			<div class="filter-item">
 				<v-text-field

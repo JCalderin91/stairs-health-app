@@ -2,7 +2,9 @@
 	<div id="home">
 		<section class="hero">
 			<img src="@/assets/image/hero.png" alt="" class="img-hero">
-			<img src="@/assets/image/wave.svg" alt="" class="img-hero-wave">
+			<transition name="up">
+			<img v-if="wave" src="@/assets/image/wave.svg" alt="" class="img-hero-wave">
+			</transition>
 			<div class="container">
 				<v-row class="container-hero" align="center">
 					<v-col :md="6" class="d-flex align-center flex-column">
@@ -47,7 +49,7 @@
 								<a href="#">
 									<i class="fa fa-instagram"></i>
 								</a>
-								<a href="#">
+								<a href="#" @click.prevent="wave=!wave">
 									<i class="fa fa-globe"></i>
 								</a>
 							</div>
@@ -77,6 +79,7 @@ export default {
 	},
 	data() {
 		return {
+			wave: false,
 			showBanner: 0,
 			options: {
 				currentPage: 0,
@@ -88,7 +91,7 @@ export default {
 		}
 	},
 	mounted() {
-
+		this.wave = true
 	},
 	methods: {
 		setBanner(indx) {
@@ -104,6 +107,7 @@ export default {
 <style lang="scss" scoped>
 	.hero {
 		position: relative;
+		overflow: hidden;
 
 		.img-hero {
 			position: absolute;
@@ -183,4 +187,11 @@ export default {
 			}
 		}
 	}
+
+.up-enter-active, .up-leave-active {
+  transition: all 1s ease-in-out;
+}
+.up-enter, .up-leave-to /* .up-leave-active below version 2.1.8 */ {
+  transform: translateY(100%) rotate(-5deg);
+}
 </style>
