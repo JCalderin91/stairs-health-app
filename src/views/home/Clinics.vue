@@ -5,7 +5,7 @@
 				<card />
 			</v-col>
 		</v-row>
-		<div class="my-3 primary more">
+		<div class="my-3 primary more" @click="$router.push({name:'clinics'})">
 			MORE OFFERTS
 		</div>
 	</v-container>

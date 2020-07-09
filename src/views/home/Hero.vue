@@ -12,7 +12,8 @@
 							<li><i class="fa fa-circle"></i>Get control of your healtcare y One Step.</li>
 							<li><i class="fa fa-circle"></i>Multiple Telehealth visits every year.</li>
 							<li><i class="fa fa-circle"></i>Your medical records saved in your system.</li>
-							<li><i class="fa fa-circle"></i>We will guide you and help you find the best <br> quality and cost-effective care.</li>
+							<li><i class="fa fa-circle"></i>We will guide you and help you find the best <br> quality
+								and cost-effective care.</li>
 
 						</ul>
 					</v-col>
@@ -32,7 +33,7 @@
 								<!-- Customizable loading -->
 								<div slot="loading">Cargando...</div>
 							</slider>
-						</div>					
+						</div>
 					</v-col>
 					<v-col :sm="12" class="up">
 						<v-container>
@@ -54,22 +55,27 @@
 					</v-col>
 					<v-col :sm="12" class="up d-flex justify-center">
 						<div class="banner-dots">
-							<div @click="setBanner(i-1)" :class="{'active': (i-1)===showBanner}" class="dot" v-for="i in 3" :key="i"></div>
-							</div>
+							<div @click="setBanner(i-1)" :class="{'active': (i-1)===showBanner}" class="dot"
+								v-for="i in 3" :key="i"></div>
+						</div>
 					</v-col>
 				</v-row>
-			</div>			
+			</div>
 		</section>
 	</div>
 </template>
 
 <script>
-import { slider, slideritem } from 'vue-concise-slider'
+import {
+	slider,
+	slideritem
+} from 'vue-concise-slider'
 export default {
 	components: {
-		slider, slideritem
+		slider,
+		slideritem
 	},
-	data () {
+	data() {
 		return {
 			showBanner: 0,
 			options: {
@@ -81,14 +87,14 @@ export default {
 			}
 		}
 	},
-	mounted () {
+	mounted() {
 
 	},
 	methods: {
-		setBanner (indx) {
+		setBanner(indx) {
 			this.$refs.slider.$emit('slideTo', indx)
 		},
-		slide (slide) {
+		slide(slide) {
 			this.showBanner = slide.currentPage
 		}
 	}
@@ -96,59 +102,69 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-	.hero{
+	.hero {
 		position: relative;
-		.img-hero{
+
+		.img-hero {
 			position: absolute;
-			top:0;
+			top: 0;
 			left: 0;
 			width: 100%;
-			height:100%;
+			height: 100%;
 			z-index: 0;
 		}
-		.img-hero-wave{
+
+		.img-hero-wave {
 			position: absolute;
-			left: 0;
+			left: -10px;
+			width: calc(100% + 10px);
 			bottom: 0;
-			width: 100%;
 			z-index: 1;
 		}
-		.container-hero{
-			height:100%;
+
+		.container-hero {
+			height: 100%;
+
 			.img-phone,
-			.img-logo{
+			.img-logo {
 				z-index: 1;
 			}
-			.img-phone{
+
+			.img-phone {
 				height: 100%
 			}
-			.become-list{
-				li{
+
+			.become-list {
+				li {
 					list-style: none;
 					padding: 3px;
 					margin: 3px 0;
-					i{
+
+					i {
 						font-size: .8rem;
 						margin-right: 10px;
 					}
 				}
 			}
 		}
-		.up{
+
+		.up {
 			z-index: 1;
 		}
-		.social-icons{
-			a{
+
+		.social-icons {
+			a {
 				padding: 5px 8px;
-				i{
+
+				i {
 					color: white;
 					font-size: 1.5rem;
 				}
 			}
 		}
-		.banner-dots{
-			.dot{
+
+		.banner-dots {
+			.dot {
 				display: inline-block;
 				height: 1rem;
 				width: 1rem;
@@ -158,8 +174,9 @@ export default {
 				cursor: pointer;
 				transition: all .3s ease-in-out;
 				opacity: .7;
+
 				&.active,
-				&:hover{
+				&:hover {
 					transform: scale(1.4);
 					opacity: 1;
 				}

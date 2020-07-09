@@ -1,11 +1,8 @@
 <template>
-	<v-card class="mb-2">
+	<v-card id="treatment" class="mb-4">
 		<v-row>
 			<v-col :md="3" class="pl-6">
-				<v-img
-					height="200px"
-					gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.4)"
-					src="@/assets/image/0.png">
+				<v-img height="200px" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.4)" src="@/assets/image/0.png">
 				</v-img>
 			</v-col>
 			<v-col :md="4">
@@ -59,36 +56,47 @@
 </script>
 
 <style scoped lang="scss">
-	.title-clinic{
+#treatment {
+	box-shadow: none;
+	border: 1px solid rgb(219, 219, 219);
+	overflow: hidden;
+
+	.title-clinic {
 		font-weight: 100;
 		font-size: 2rem;
-	}	
-	.more-info{
+	}
+
+	.more-info {
 		background-color: #f5f5f5;
 		display: flex;
 		justify-content: space-between;
-		.treatment-options{
+
+		.treatment-options {
 			background-color: white;
 			height: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			.treatment-options-item{
+
+			.treatment-options-item {
 				padding: .5rem 1.2rem;
 				cursor: pointer;
 				transition: all .3s ease-in-out;
 				font-size: 1.3rem;
-				&:hover{
+
+				&:hover {
 					background-color: #ccc;
 				}
 			}
 		}
 
 	}
-	.table-treatment-deatils{
-		th{
+
+	.table-treatment-deatils {
+		th {
 			text-align: left;
 			padding: 2px 15px 2px 2px;
 		}
 	}
+}
 </style>

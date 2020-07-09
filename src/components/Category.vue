@@ -50,8 +50,8 @@ export default {
 </script>
 <style scoped lang="scss">
 #category{
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
   margin: 20px auto 25px auto;
   text-align: center;
   transition: all .3s ease-in-out;
@@ -69,7 +69,7 @@ export default {
   }
   .text{
     color: #000;
-    padding-top: 2px;
+    margin-top: 5px;;
     font-size: 12px;
   }
   .image-container{

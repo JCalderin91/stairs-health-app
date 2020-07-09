@@ -34,6 +34,8 @@ export default {
 
 <style scoped lang="scss">
 #card{
+  box-shadow: none;
+  border: 1px solid rgb(219, 219, 219);
   .badge{
     position: absolute;
     top: 0;
