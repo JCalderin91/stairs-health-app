@@ -1,28 +1,17 @@
 <template>
 
-  <div >
+ 
     <l-map
       :zoom="zoom"
       :center="center"
-      style="height: 500px; width: 100%"
+      style="height: 600px; width: 100%;z-index:0"
     >
       <l-tile-layer
         :url="url"
         :attribution="attribution"
       />
-      <l-control class="example-custom-control">
-        <p @click="showAlert">
-          Click me
-        </p>
-      </l-control>
-      <l-control
-        :position="'bottomleft'"
-        class="custom-control-watermark"
-      >
-        Vue2Leaflet Watermark Control
-      </l-control>
     </l-map>
-  </div>
+  
 </template>
 
 <script>

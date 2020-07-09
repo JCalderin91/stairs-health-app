@@ -89,9 +89,10 @@
 			top: 0;
 			right: 0;
 			background-color: #00cae9;
-			padding: .3rem 1.5rem;
+			padding: .5rem 1.5rem;
 			color: white;
 			border-radius: 0 0 0 13px;
+			z-index: 10;
 			cursor: pointer;
 			.expand-text{
 				font-size: .9rem;

@@ -5,6 +5,7 @@ import router from './router';
 import store from './store';
 import { sync } from 'vuex-router-sync';
 import axios from 'axios';
+import 'leaflet/dist/leaflet.css';
 import './assets/css/style.css';
 
 
