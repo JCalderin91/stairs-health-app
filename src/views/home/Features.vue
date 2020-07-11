@@ -11,9 +11,9 @@
 								<div v-if="hover"
 									class="d-flex transition-fast-in-fast-out v-card--reveal display-3 white--text"
 									style="height: 100%;">
-									<v-card-title>Cash payment discount</v-card-title>
 								</div>
 							</v-expand-transition>
+									<v-card-title>Cash payment discount</v-card-title>
 						</v-img>
 					</v-card>
 				</v-hover>
@@ -29,9 +29,9 @@
 									class="d-flex transition-fast-in-fast-out v-card--reveal display-3 white--text"
 									style="height: 100%;">
 
-									<v-card-title>Patient loyalty discount</v-card-title>
 								</div>
 							</v-expand-transition>
+									<v-card-title>Patient loyalty discount</v-card-title>
 						</v-img>
 					</v-card>
 				</v-hover>
@@ -46,9 +46,9 @@
 								<div v-if="hover"
 									class="d-flex transition-fast-in-fast-out v-card--reveal display-3 white--text"
 									style="height: 100%;">
-									<v-card-title>Bundles</v-card-title>
 								</div>
 							</v-expand-transition>
+									<v-card-title>Bundles</v-card-title>
 						</v-img>
 					</v-card>
 				</v-hover>
@@ -62,11 +62,9 @@
 							<v-expand-transition>
 								<div v-if="hover"
 									class="d-flex transition-fast-in-fast-out v-card--reveal display-3 white--text"
-									style="height: 100%;">
-									<v-card-title>PCP Televisit</v-card-title>
-
-								</div>
+									style="height: 100%;"></div>
 							</v-expand-transition>
+							<v-card-title>PCP Televisit</v-card-title>
 						</v-img>
 					</v-card>
 				</v-hover>
@@ -91,5 +89,6 @@
 	justify-content: flex-start;
 	position: absolute;
 	width: 100%;
+	z-index: -1;
 }
 </style>

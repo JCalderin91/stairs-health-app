@@ -116,6 +116,7 @@ export default {
 			width: 100%;
 			height: 100%;
 			z-index: 0;
+			object-fit: cover; 
 		}
 
 		.img-hero-wave {

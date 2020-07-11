@@ -69,7 +69,7 @@ export default {
   }
   .text{
     color: #000;
-    margin-top: 5px;;
+    margin-top: 16px;;
     font-size: 12px;
   }
   .image-container{

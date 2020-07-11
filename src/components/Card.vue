@@ -1,5 +1,5 @@
 <template>
-    <v-card id="card" >
+    <v-card id="card" :class="{'border': !inMap}">
       <v-img class="white--text align-end" height="200px" src="@/assets/image/0.png">
         <div class="badge">
           <div class="price">$ 200</div>
@@ -7,12 +7,10 @@
         </div>
         <div class="main-title">Clinic Domenic</div>
       </v-img>
-
       <v-card-text class="text--primary">
         <h4>Treatment Mane</h4>
         <h5>Teeament descrioption</h5>
       </v-card-text>
-
     </v-card>
 </template>
 
@@ -21,8 +19,11 @@ export default {
   data: () => ({
    
   }),
-  methods: {
-    
+  props: {
+    inMap: {
+      type: Boolean,
+      default: false
+    }    
   },
 };
 </script>
@@ -30,7 +31,10 @@ export default {
 <style scoped lang="scss">
 #card {
   box-shadow: none;
-  border: 1px solid rgb(226, 226, 226);
+  cursor: pointer;
+  &.border{
+    border: 1px solid rgb(226, 226, 226);
+  }
   .text--primary{
     h4{
       text-decoration: none;

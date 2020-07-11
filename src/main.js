@@ -8,6 +8,12 @@ import axios from 'axios';
 import 'leaflet/dist/leaflet.css';
 import './assets/css/style.css';
 
+import * as VueGoogleMaps from "vue2-google-maps";
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: "AIzaSyArEloE-Gg4tUr7j7qVvyyUWZGa1RU2KZA",
+    },
+});
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
