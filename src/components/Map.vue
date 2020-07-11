@@ -1,10 +1,9 @@
 <template>
-  <div>
     <gmap-map
       ref="gmap"
       :center="center"
       :zoom="12"
-      style="width:100%;  height: 100vh;"
+      style="height: 100%;"
     >
       
       <gmap-marker
@@ -24,7 +23,6 @@
       </gmap-info-window>
 
     </gmap-map>
-  </div>
 </template>
 
 <script>

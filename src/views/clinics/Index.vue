@@ -74,6 +74,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.static-map {
+  position: fixed;
+  top: 60px;
+  width: 326px;
+	z-index: 11;
+	  height: calc(100vh - 61px);
+}
 .indicator{
 	position: fixed;
 	bottom: 12px;
@@ -84,6 +91,7 @@ export default {
 		overflow: hidden;
 		position: relative;
 		// background-color: #f5f5f5;
+		height: 100vh;
 		max-height: 100vh;
 		min-height: 100vh;
 
