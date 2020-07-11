@@ -4,6 +4,7 @@
       :center="center"
       :zoom="12"
       style="height: 100%;"
+      :options="options"
     >
       
       <gmap-marker
@@ -35,6 +36,14 @@ export default {
   data() {
     return {
       //a default center for the map
+      options: {
+        zoomControl: true,
+        mapTypeControl: false,
+        scaleControl: true,
+        streetViewControl: false,
+        rotateControl: false,
+        fullscreenControl: false
+      },
       center: {
         lat: 52.511950,
         lng: 6.089625
