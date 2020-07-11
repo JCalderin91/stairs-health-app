@@ -51,7 +51,6 @@
 		})
 	}
 </script>
-
 <style lang="scss" scoped>
 .right-panel{
 	position: relative;
