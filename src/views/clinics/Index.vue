@@ -27,11 +27,14 @@
 					<span class="expand-text">{{mapCol === 3 ? 'Expand' : 'Collapse'}} map</span>
 					<i v-if="mapCol===3" class="fa fa-chevron-right expand-icon"></i>
 				</div> -->
-				<map-specialities ref="map" :class="{'static-map': fixed}" />
+				<div class="mapa" :class="{'static-map': true}">
+					<map-specialities id="map"  />
+				</div>
+				<div id="floor"></div>
 			</v-col>
 			<v-col v-if="mapCol === 3" :md="9" class="specialities-container----">
-				<v-row>
-					<v-col md="4" v-for="i in 15" :key="i">
+				<v-row id="specialities-container">
+					<v-col md="4" v-for="i in 20" :key="i">
 						<specialities-card />
 					</v-col>
 				</v-row>
@@ -57,75 +60,68 @@ export default {
 	methods: {
 		toogleMap() {
 			this.mapCol = this.mapCol === 3 ? 12 : 3
-		},
-		handleScroll (event) {
-			var el = document.getElementsByClassName('mapContainer')[0];
-			console.log(el.offsetWidth, el.offsetLeft)
-			this.fixed = window.scrollY >= el.offsetTop ? true : false
 		}
-	},
-	created: function () {
-		window.addEventListener('scroll', this.handleScroll);
-	},
-	destroyed: function () {
-		window.removeEventListener('scroll', this.handleScroll);
 	}
 }
 </script>
 
 <style scoped lang="scss">
-.static-map {
-  position: fixed;
-  top: 60px;
-  width: 326px;
-	z-index: 11;
-	  height: calc(100vh - 61px);
-}
-.indicator{
+
+
+.indicator {
 	position: fixed;
 	bottom: 12px;
 	right: 12px;
 	z-index: 9999;
 }
-	.mapContainer {
-		overflow: hidden;
-		position: relative;
-		// background-color: #f5f5f5;
-		height: 100vh;
-		max-height: 100vh;
-		min-height: 100vh;
 
-		.expand-button {
-			position: absolute;
-			top: 0;
-			right: 0;
-			background-color: #00cae9;
-			padding: .5rem 1.5rem;
-			color: white;
-			border-radius: 0 0 0 13px;
-			z-index: 10;
-			cursor: pointer;
+.mapContainer {
+	.static-map {
+		position: sticky;
+		top: 61px;
+		z-index: 11;
+	}
 
-			.expand-text {
-				font-size: .9rem;
-				font-weight: bold;
-			}
+	#floor {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		background-color: #000;
+	}
 
-			.expand-icon {
-				font-size: .8rem;
-				margin-left: 5px;
-				transform: translateY(1px);
-			}
+	.expand-button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #00cae9;
+		padding: .5rem 1.5rem;
+		color: white;
+		border-radius: 0 0 0 13px;
+		z-index: 10;
+		cursor: pointer;
 
-			.collapse-icon {
-				font-size: .8rem;
-				margin-right: 5px;
-				transform: translateY(1px);
-			}
+		.expand-text {
+			font-size: .9rem;
+			font-weight: bold;
+		}
+
+		.expand-icon {
+			font-size: .8rem;
+			margin-left: 5px;
+			transform: translateY(1px);
+		}
+
+		.collapse-icon {
+			font-size: .8rem;
+			margin-right: 5px;
+			transform: translateY(1px);
 		}
 	}
-	.specialities-container{
-		height: 100vh;
-		overflow-y: scroll;
-	}
+}
+
+.specialities-container {
+	height: 100vh;
+	overflow-y: scroll;
+}
 </style>
