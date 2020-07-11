@@ -27,10 +27,9 @@
 					<span class="expand-text">{{mapCol === 3 ? 'Expand' : 'Collapse'}} map</span>
 					<i v-if="mapCol===3" class="fa fa-chevron-right expand-icon"></i>
 				</div> -->
-				<div class="mapa" :class="{'static-map': true}">
+				<div class="mapa static-map" >
 					<map-specialities id="map"  />
 				</div>
-				<div id="floor"></div>
 			</v-col>
 			<v-col v-if="mapCol === 3" :md="9" class="specialities-container----">
 				<v-row id="specialities-container">
