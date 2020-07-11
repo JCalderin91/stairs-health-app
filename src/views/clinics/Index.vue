@@ -34,7 +34,7 @@
 			</v-col>
 			<v-col v-if="mapCol === 3" :md="9" class="specialities-container----">
 				<v-row id="specialities-container">
-					<v-col md="4" v-for="i in 20" :key="i">
+					<v-col md="4" v-for="i in 2" :key="i">
 						<specialities-card />
 					</v-col>
 				</v-row>
@@ -78,8 +78,8 @@ export default {
 .mapContainer {
 	.static-map {
 		position: sticky;
-		top: 61px;
-		z-index: 11;
+		top: 64px;
+		height: calc(100vh - 61px);
 	}
 
 	#floor {
