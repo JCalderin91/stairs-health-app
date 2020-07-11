@@ -34,7 +34,7 @@
 			</v-col>
 			<v-col v-if="mapCol === 3" :md="9" class="specialities-container----">
 				<v-row id="specialities-container">
-					<v-col md="4" v-for="i in 2" :key="i">
+					<v-col md="4" v-for="i in 15" :key="i">
 						<specialities-card />
 					</v-col>
 				</v-row>
