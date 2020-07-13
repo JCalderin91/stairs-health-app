@@ -7,6 +7,7 @@ export default new Router({
   linkActiveClass: 'active',
   // mode: 'history',
   scrollBehavior () {
+    // console.log('scrollBehavior')
     return { x: 0, y: 0 }
   },
   routes: [
@@ -38,7 +39,7 @@ export default new Router({
     {
       path: '/compare',
       name: 'compare',
-      component: () => import('@/views/compare/Main.vue')
+      component: () => import('@/views/compare/Index.vue')
     }
   ]
 });

@@ -14,7 +14,7 @@
 		</v-col>
 		<v-col :md="12" align="center">
 			<div class="my-3 mx-10">
-				<v-text-field class="v-input--is-focused primary--text focused" autofocus rounded placeholder="Chooce you insurance" 
+				<v-text-field class="v-input--is-focused primary--text focused" rounded placeholder="Chooce you insurance" 
 				outlined >
 					<v-icon slot="append" color="primary">
 							mdi-shield-check-outline
@@ -100,10 +100,6 @@
 
 <style scoped lang="scss">
 
-div.focused > div.v-input__control > div.v-input__slot 
-> div.v-input__apped-inner > div.v-input__icon > i.v-icon{
-	color: #00cae9 !important
-}
 .info-box{
 	text-align: center;
 	h1{
