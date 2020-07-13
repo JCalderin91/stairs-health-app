@@ -1,5 +1,5 @@
 <template>
-	<v-container>
+	<v-container class="my-6">
 		<treatment v-for="i in 3" :key="i" />
 	</v-container>
 </template>

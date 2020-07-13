@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="my-6">
 		<info />
 		<treatment />
 		<v-container>

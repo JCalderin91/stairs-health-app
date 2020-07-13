@@ -1,5 +1,5 @@
 <template>
-	<v-container class="pa-0 compare">
+	<v-container class="pa-0 compare my-6">
 		<v-row>
 			<v-col md="6" class="px-5">
 				<clinic />
