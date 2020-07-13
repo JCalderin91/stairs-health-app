@@ -8,7 +8,9 @@
 		<transition name="fade" mode="out-in">
 			<speciality-list v-if="panel===1" />
 			<div v-else>
-				<v-img src="@/assets/image/map.png" height="200"/>
+				<div class="map-contact">
+					<map-contact />
+				</div>
 				<br>
 				<information class="px-2" />
 				<br>
@@ -32,10 +34,11 @@
 	import Information from '@/components/Information'
 	import ShButton from '@/components/ShButton'
 	import SpecialityList from '@/components/SpecialityList'
+	import MapContact from '@/components/MapContact'
 
 	export default {
 		components: {
-			Information, ShButton, SpecialityList
+			Information, ShButton, SpecialityList, MapContact
 		},		
 		data: () => ({
 			panel: 1
@@ -51,6 +54,9 @@
 </script>
 
 <style scoped lang="scss">
+.map-contact{
+	height: 200px;
+}
 	.tabs{
 		display: flex;
 		justify-content: space-between;

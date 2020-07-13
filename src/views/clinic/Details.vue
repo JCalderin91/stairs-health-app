@@ -13,16 +13,13 @@
 			<p>Apply Discount</p>
 		</v-col>
 		<v-col :md="12" align="center">
-
-			<div class="sh-button my-3">
-				<div class="sub-container">
-					<div class="text">
-						Choose you insurance
-					</div>
-					<div class="icon">
-						<img src="@/assets/image/surface.svg" />
-					</div>
-				</div>
+			<div class="my-3 mx-10">
+				<v-text-field class="v-input--is-focused primary--text focused" autofocus rounded placeholder="Chooce you insurance" 
+				outlined >
+					<v-icon slot="append" color="primary">
+							mdi-shield-check-outline
+					</v-icon>
+				</v-text-field>
 			</div>	
 			<br>
 			<table class="table w-100">
@@ -102,6 +99,11 @@
 </script>
 
 <style scoped lang="scss">
+
+div.focused > div.v-input__control > div.v-input__slot 
+> div.v-input__apped-inner > div.v-input__icon > i.v-icon{
+	color: #00cae9 !important
+}
 .info-box{
 	text-align: center;
 	h1{
@@ -112,32 +114,7 @@
 		border-radius: 5px;
 	}
 }
-.sh-button{
-	display: inline-block;
-	border-radius: 2rem;
-	padding: 8px 25px;
-	border: 2px solid #00cae9;
-	.sub-container{
-		display: flex;
-		align-items: center;
-		.text{
-			text-align: center;
-			margin-bottom: 0;
-			color: #444;
-			display: inline-block;
-			font-size: 1rem;
-		}
-		.icon{
-			display: inline-block;
-			height: 1.8rem;
-			display: inline-block;
-			margin-left: 10px;
-			img{
-				height: 100%;
-			}
-		}
-	}
-}
+
 .table{
 	margin: 15px 5px;
 	td{

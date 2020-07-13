@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <main-menu @toggleDialog="dialog = $event" />
-    <v-content class="">
+    <v-content class="my-6">
       <transition name="fade" mode="out-in">
         <router-view/>
       </transition>

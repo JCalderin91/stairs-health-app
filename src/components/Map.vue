@@ -11,6 +11,7 @@
         :key="index"
         v-for="(m, index) in markers"
         :position="m.position"
+        :icon="markerOptions"
         @click="toggleInfoWindow(m,index)">
       </gmap-marker>
 
@@ -28,6 +29,7 @@
 
 <script>
 import Card from '@/components/Card'
+const mapMarker = require('@/assets/image/marker.png');
 export default {
   components: {
     Card
@@ -35,6 +37,11 @@ export default {
   name: "GoogleMap",
   data() {
     return {
+      markerOptions: {
+        url: mapMarker,
+        size: {width: 60, height: 60, f: 'px', b: 'px',},
+        scaledSize: {width: 40, height: 40, f: 'px', b: 'px',},
+      },
       //a default center for the map
       options: {
         zoomControl: true,
@@ -59,8 +66,8 @@ export default {
       //optional: offset infowindow so it visually sits nicely on top of our marker
       infoOptions: {
         pixelOffset: {
-          width: 0,
-          height: -35
+          width: -10,
+          height: -45
         }
       },
       markers: [{
@@ -68,17 +75,17 @@ export default {
           description: "description 1",
           date_build: "",
           position: {
-            lat: 52.512942,
-            lng: 6.089625
-          }
+            lat: 40.711631,
+            lng: -74.006641
+          },
         },
         {
           name: "House of Potgieter",
           description: "description 2",
           date_build: "",
           position: {
-            lat: 52.511950,
-            lng: 6.091056
+            lat: 40.720840, 
+            lng: -74.010571
           }
         },
         {
@@ -86,8 +93,8 @@ export default {
           description: "description 3",
           date_build: "",
           position: {
-            lat: 52.511047,
-            lng: 6.091728
+            lat: 40.732740,
+            lng: -74.010571
           }
         },
       ],

@@ -1,11 +1,13 @@
 <template>
-	<v-container class="pa-0">
+	<v-container class="pa-0 compare">
 		<v-row>
 			<v-col md="6" class="px-5">
 				<clinic />
 			</v-col>
 			<v-col md="6" class="px-5 right-panel">
-				<clinic v-if="compare" />
+				<v-card class="card-base" outlined v-if="compare">
+					<clinic  />
+				</v-card>
 				<v-row v-else>
 					<v-row>
 						<v-col md="6">
@@ -52,15 +54,21 @@
 	}
 </script>
 <style lang="scss" scoped>
-.right-panel{
+.card-base{
+	border: none !important;
+	background: transparent;
+}
+.compare {
 	position: relative;
-	&::before{
+	&::before {
 		content: "";
 		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
+		top: -28px;
+		left: 50%;
+		min-height: 100vh;
+		height: 120%;
 		width: 50vw;
+		z-index: 0;
 		background-color: #f5f5f5;
 	}
 }

@@ -2,21 +2,15 @@
 	<v-container>
 		<specialities-slider />
 		<v-row>
-			<v-col md="3">
-				<v-text-field hide-details outlined dense rounded placeholder="Speciality" append-icon="mdi-currency-usd"
-					class="w-100"></v-text-field>
+			<v-col :md="4">
+				<v-text-field outlined rounded dense placeholder="Search" class="mx-10"></v-text-field>
 			</v-col>
-			<v-col md="3">
-				<v-text-field hide-details outlined dense rounded placeholder="Treatment" append-icon="mdi-microphone"
-					class="w-100"></v-text-field>
+			<v-col :md="4">
+				<v-text-field outlined dense rounded placeholder="Zip code or City" class="mx-10"></v-text-field>
 			</v-col>
-			<v-col md="3">
-				<v-text-field hide-details outlined dense rounded placeholder="Location" append-icon="mdi-map-marker"
-					class="w-100"></v-text-field>
-			</v-col>
-			<v-col md="3">
-				<v-text-field hide-details outlined dense rounded placeholder="Price" append-icon="mdi-currency-usd"
-					class="w-100"></v-text-field>
+			<v-col :md="4">
+				<v-range-slider label="Price range" class="mt-5" v-model="range" min="100" max="1000" thumb-label="always"
+					:thumb-size="24"></v-range-slider>
 			</v-col>
 		</v-row>
 
@@ -27,8 +21,8 @@
 					<span class="expand-text">{{mapCol === 3 ? 'Expand' : 'Collapse'}} map</span>
 					<i v-if="mapCol===3" class="fa fa-chevron-right expand-icon"></i>
 				</div> -->
-				<div class="mapa static-map" >
-					<map-specialities id="map"  />
+				<div class="mapa static-map">
+					<map-specialities id="map" />
 				</div>
 			</v-col>
 			<v-col v-if="mapCol === 3" :md="9" class="specialities-container----">

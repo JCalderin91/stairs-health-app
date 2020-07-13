@@ -5,35 +5,14 @@
 			<div class="inputs-container">
 				<v-row>
 					<v-col :md="4">
-						<v-text-field
-							outlined
-							rounded
-							dense
-							placeholder="Search"
-							append-icon="mdi-magnify"
-							class="mx-10"
-						></v-text-field>
+						<v-text-field outlined rounded dense placeholder="Search" class="mx-10"></v-text-field>
 					</v-col>
 					<v-col :md="4">
-						<v-text-field
-							outlined
-							dense
-							rounded
-							placeholder="Zip code or City"
-							append-icon="mdi-map-marker"
-							class="mx-10"
-						></v-text-field>
+						<v-text-field outlined dense rounded placeholder="Zip code or City" class="mx-10"></v-text-field>
 					</v-col>
 					<v-col :md="4">
-						<v-range-slider
-							label="Price range"
-							class="mt-5"
-							v-model="range"
-							min="100"
-							max="1000"
-							thumb-label="always"
-							:thumb-size="24"
-						></v-range-slider>
+						<v-range-slider label="Price range" class="mt-5" v-model="range" min="100" max="1000" thumb-label="always"
+							:thumb-size="24"></v-range-slider>
 					</v-col>
 				</v-row>
 			</div>

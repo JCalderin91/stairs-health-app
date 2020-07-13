@@ -1,5 +1,5 @@
 <template>
-	<div>		
+	<div id="footer">		
 		<footer class="primary">
 			<v-container class="py-5">
 				<v-row>
@@ -61,6 +61,9 @@
 </template>
 
 <style scoped lang="scss">
+#footer{
+	z-index: 2;
+}
 footer{
 	color: white;
 	.list-group{
