@@ -9,14 +9,9 @@
 				<v-row class="container-hero" align="center">
 					<v-col :md="6" class="d-flex align-center flex-column">
 						<img class="img-logo" src="@/assets/image/logo-full-white.png" alt="">
-						<h4 class="py-5 up white--text">Become a Stairs member</h4>
+						<h4 class="py-5 up white--text">{{texts[showBanner].title}}</h4>
 						<ul class="up white--text become-list">
-							<li><i class="fa fa-circle"></i>Get control of your healtcare y One Step.</li>
-							<li><i class="fa fa-circle"></i>Multiple Telehealth visits every year.</li>
-							<li><i class="fa fa-circle"></i>Your medical records saved in your system.</li>
-							<li><i class="fa fa-circle"></i>We will guide you and help you find the best <br> quality
-								and cost-effective care.</li>
-
+							<li v-for="(item, key) in texts[showBanner].items" :key="key"><i class="fa fa-circle"></i>{{item}}</li>
 						</ul>
 					</v-col>
 					<v-col :md="6">
@@ -87,7 +82,36 @@ export default {
 				slidesToScroll: 1,
 				pagination: false,
 				loop: true
-			}
+			},
+			texts: [
+				{
+					title: 'Want to know much a medical service costs?',
+					items: [
+						'Search and compare services costs.',
+						'Search by location.',
+						'Search by speciality, procedure or treatment.',
+						'Compare prices.'
+					]
+				},
+				{
+					title: 'Find the best choice',
+					items: [
+						'Select the provider of your choice.',
+						'Direct contact with your provider.',
+						'Schedule your appointment through our app.',
+						'Benefit  from providers discounts by shopping services through our tool.'
+					]
+				},
+				{
+					title: 'Become a Stairs menber',
+					items: [
+						'Get control of your healthcare in One Step.',
+						'Multiple Telehealth visits every year.',
+						'Your medical records saved in our system.',
+						'We will guide you and help ypu find the best quality and cost-effective care.'
+					]
+				},
+			]
 		}
 	},
 	mounted() {
@@ -140,6 +164,7 @@ export default {
 			}
 
 			.become-list {
+				width: 435px;
 				li {
 					list-style: none;
 					padding: 3px;

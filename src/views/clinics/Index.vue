@@ -2,13 +2,16 @@
 	<v-container>
 		<specialities-slider />
 		<v-row>
-			<v-col :md="4">
-				<v-text-field outlined rounded dense placeholder="Search" class="mx-10"></v-text-field>
+			<v-col :md="3">
+				<v-text-field outlined rounded dense placeholder="Speciality" class="mx-10"></v-text-field>
 			</v-col>
-			<v-col :md="4">
-				<v-text-field outlined dense rounded placeholder="Zip code or City" class="mx-10"></v-text-field>
+			<v-col :md="3">
+				<v-text-field outlined rounded dense placeholder="Treatment" class="mx-10"></v-text-field>
 			</v-col>
-			<v-col :md="4">
+			<v-col :md="3">
+				<v-text-field outlined dense rounded append-icon="mdi-map-marker" placeholder="Zip code or City" class="mx-10"></v-text-field>
+			</v-col>
+			<v-col :md="3">
 				<v-range-slider label="Price range" class="mt-5" v-model="range" min="100" max="1000" thumb-label="always"
 					:thumb-size="24"></v-range-slider>
 			</v-col>
@@ -27,7 +30,7 @@
 			</v-col>
 			<v-col v-if="mapCol === 3" :md="9" class="specialities-container----">
 				<v-row id="specialities-container">
-					<v-col md="4" v-for="i in 15" :key="i">
+					<v-col class="pt-0" md="4" v-for="i in 15" :key="i">
 						<specialities-card />
 					</v-col>
 				</v-row>
