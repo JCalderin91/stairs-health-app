@@ -1,37 +1,8 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
-import {
-  VApp,
-  VBtn,
-  VBtnToggle,
-  VCard,
-  VCheckbox,
-  VDivider,
-  VGrid,
-  VIcon,
-  VList,
-  VProgressLinear,
-  VTextField,
-  VDatePicker
-} from 'vuetify';
-
-Vue.use(Vuetify, {
-  components: {
-    VApp,
-    VBtn,
-    VBtnToggle,
-    VCard,
-    VCheckbox,
-    VDivider,
-    VGrid,
-    VIcon,
-    VList,
-    VProgressLinear,
-    VTextField,
-    VDatePicker
-  },
-});
+Vue.use(Vuetify);
 
 export default new Vuetify({
   theme: {

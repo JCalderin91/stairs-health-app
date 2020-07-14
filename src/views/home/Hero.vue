@@ -8,7 +8,7 @@
 			<div class="container">
 				<v-row class="container-hero" align="center">
 					<v-col :md="6" class="d-flex align-center flex-column">
-						<img class="img-logo" src="@/assets/image/logo-full-white.png" alt="">
+						<img class="img-logo" height="150" src="@/assets/image/logo-full-white.png" alt="">
 						<h4 class="py-5 up white--text">{{texts[showBanner].title}}</h4>
 						<ul class="up white--text become-list">
 							<li v-for="(item, key) in texts[showBanner].items" :key="key"><i class="fa fa-circle"></i>{{item}}</li>

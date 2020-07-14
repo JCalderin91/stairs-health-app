@@ -14,7 +14,7 @@
 		</v-col>
 		<v-col :md="12" align="center">
 			<div class="my-3 mx-10">
-				<v-text-field class="v-input--is-focused primary--text focused" rounded placeholder="Chooce you insurance" 
+				<v-text-field style="width: 250px" class="v-input--is-focused primary--text focused" rounded placeholder="Chooce you insurance" 
 				outlined >
 					<v-icon slot="append" color="primary">
 							mdi-shield-check-outline

@@ -14,15 +14,13 @@
 		</v-col>
 		<v-col :md="12" align="center">
 
-			<div class="sh-button my-3">
-				<div class="sub-container">
-					<div class="text">
-						Choose you insurance
-					</div>
-					<div class="icon">
-						<img src="@/assets/image/surface.svg" />
-					</div>
-				</div>
+			<div class="mx-10">
+				<v-text-field style="width: 250px" class="v-input--is-focused primary--text focused" rounded placeholder="Chooce you insurance" 
+				outlined >
+					<v-icon slot="append" color="primary">
+							mdi-shield-check-outline
+					</v-icon>
+				</v-text-field>
 			</div>	
 			<br>
 			<table class="table w-100">
