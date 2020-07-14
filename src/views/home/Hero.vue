@@ -165,6 +165,7 @@ export default {
 
 			.become-list {
 				width: 435px;
+				height: 180px;
 				li {
 					list-style: none;
 					padding: 3px;
