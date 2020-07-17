@@ -15,6 +15,7 @@
 		<div class="separador"></div>
 	</v-container>
 </template>
+
 <script>
 	import ShButton from '@/components/ShButton'
 	export default {

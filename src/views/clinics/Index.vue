@@ -19,11 +19,6 @@
 
 		<v-row>
 			<v-col :md="mapCol" class="mapContainer">
-				<!-- <div class="expand-button" @click="toogleMap()">
-					<i v-if="mapCol===12" class="fa fa-chevron-left collapse-icon"></i>
-					<span class="expand-text">{{mapCol === 3 ? 'Expand' : 'Collapse'}} map</span>
-					<i v-if="mapCol===3" class="fa fa-chevron-right expand-icon"></i>
-				</div> -->
 				<div class="mapa static-map">
 					<map-specialities id="map" />
 				</div>
@@ -31,7 +26,9 @@
 			<v-col v-if="mapCol === 3" :md="9" class="specialities-container----">
 				<v-row id="specialities-container">
 					<v-col class="pt-0" md="4" v-for="i in 15" :key="i">
-						<specialities-card />
+						<router-link tag="div" :to="{name:'clinic'}">
+							<specialities-card />
+						</router-link>
 					</v-col>
 				</v-row>
 			</v-col>

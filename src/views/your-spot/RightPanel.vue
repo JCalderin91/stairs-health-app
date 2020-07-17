@@ -57,42 +57,50 @@
 </script>
 
 <style scoped lang="scss">
-	.appointment{
+	.appointment {
 		margin-top: 1rem;
-		.title{
+
+		.title {
 			text-align: center;
 			background-color: #eee;
-			padding: .5rem 0; 
+			padding: .5rem 0;
 		}
-		.appointment-list{
-			.appointment-list-item{
+
+		.appointment-list {
+			.appointment-list-item {
 				display: flex;
 				margin: 2px 0;
 				padding: .3rem 0;
 				font-size: 1.2rem;
 				transition: all .2s ease-in-out;
-				.sub-item{
+
+				.sub-item {
 					width: 50%;
 					text-align: center;
-					&.status{
+
+					&.status {
 						color: transparent;
 					}
 				}
-				&:hover:not(.booked){
+
+				&:hover:not(.booked) {
 					cursor: pointer;
 					background-color: #00cae9;
 					color: white;
 				}
-				&.booked{
+
+				&.booked {
 					background-color: #eee;
-					.sub-item{
+
+					.sub-item {
 						color: #999;
 					}
 				}
 			}
 		}
 	}
-	.schedule{
+
+	.schedule {
 		margin-top: 1rem;
 		background-color: #00cae9;
 		text-align: center;
@@ -101,5 +109,4 @@
 		color: white;
 		cursor: pointer;
 	}
-	
 </style>

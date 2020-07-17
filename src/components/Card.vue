@@ -1,24 +1,21 @@
 <template>
-    <v-card id="card" :class="{'border': !inMap}">
-      <v-img class="white--text align-end" height="200px" src="@/assets/image/0.png">
-        <div class="badge">
-          <div class="price">$ 200</div>
-          <div class="text">Standar Charges</div>
-        </div>
-        <div class="main-title">Clinic Domenic</div>
-      </v-img>
-      <v-card-text class="text--primary">
-        <h4>Treatment Mane</h4>
-        <h5>Teeament descrioption</h5>
-      </v-card-text>
-    </v-card>
+  <v-card id="card" :class="{'border': !inMap}">
+    <v-img class="white--text align-end" height="200px" src="@/assets/image/0.png">
+      <div class="badge">
+        <div class="price">$ 200</div>
+        <div class="text">Standar Charges</div>
+      </div>
+      <div class="main-title">Clinic Domenic</div>
+    </v-img>
+    <v-card-text class="text--primary">
+      <h4>Treatment Mane</h4>
+      <h5>Teeament descrioption</h5>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
 export default {
-  data: () => ({
-   
-  }),
   props: {
     inMap: {
       type: Boolean,
@@ -32,14 +29,17 @@ export default {
 #card {
   box-shadow: none;
   cursor: pointer;
-  &.border{
+
+  &.border {
     border: 1px solid rgb(226, 226, 226);
   }
-  .text--primary{
-    h4{
+
+  .text--primary {
+    h4 {
       text-decoration: none;
     }
   }
+
   .badge {
     position: absolute;
     top: 0;
@@ -58,12 +58,12 @@ export default {
       color: white;
     }
   }
-  .main-title{
+
+  .main-title {
     color: white !important;
     position: absolute;
     left: .5rem;
     bottom: .5rem;
-  }  
+  }
 }
-
 </style>

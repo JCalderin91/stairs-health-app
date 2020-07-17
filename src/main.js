@@ -6,7 +6,7 @@ import store from './store';
 import { sync } from 'vuex-router-sync';
 import axios from 'axios';
 import 'leaflet/dist/leaflet.css';
-import './assets/css/style.css';
+import './assets/scss/style.scss';
 
 import * as VueGoogleMaps from "vue2-google-maps";
 Vue.use(VueGoogleMaps, {

@@ -13,8 +13,7 @@
 			<p>Apply Discount</p>
 		</v-col>
 		<v-col :md="12" align="center">
-
-			<div class="mx-10">
+			<div class="my-3 mx-10">
 				<v-text-field style="width: 250px" class="v-input--is-focused primary--text focused" rounded placeholder="Chooce you insurance" 
 				outlined >
 					<v-icon slot="append" color="primary">
@@ -100,6 +99,7 @@
 </script>
 
 <style scoped lang="scss">
+
 .info-box{
 	text-align: center;
 	h1{
@@ -110,32 +110,7 @@
 		border-radius: 5px;
 	}
 }
-.sh-button{
-	display: inline-block;
-	border-radius: 2rem;
-	padding: 8px 25px;
-	border: 2px solid #00cae9;
-	.sub-container{
-		display: flex;
-		align-items: center;
-		.text{
-			text-align: center;
-			margin-bottom: 0;
-			color: #444;
-			display: inline-block;
-			font-size: 1rem;
-		}
-		.icon{
-			display: inline-block;
-			height: 1.8rem;
-			display: inline-block;
-			margin-left: 10px;
-			img{
-				height: 100%;
-			}
-		}
-	}
-}
+
 .table{
 	margin: 15px 5px;
 	td{

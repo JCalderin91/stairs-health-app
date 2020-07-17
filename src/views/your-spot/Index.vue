@@ -16,13 +16,17 @@
 </template>
 
 <script>
-	import Info from './Info'
+	import Info from '@/components/InfoClinic'
 	import Treatment from './Treatment'
-	import DetailsClinic from './Details'
+	import DetailsClinic from '@/components/DetailsClinic'
 	import RightPanel from './RightPanel'
+
 	export default {
 		components: {
-			Info, Treatment, DetailsClinic, RightPanel
+			Info,
+			Treatment,
+			DetailsClinic,
+			RightPanel
 		}
 	}
 </script>

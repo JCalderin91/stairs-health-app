@@ -1,35 +1,35 @@
 <template>
-	<v-container class="pa-0 compare my-6">
+	<v-container id="compare" class="pa-0 my-6">
 		<v-row>
 			<v-col md="6" class="px-5">
 				<clinic />
 			</v-col>
 			<v-col md="6" class="px-5 right-panel">
 				<v-card class="card-base" outlined v-if="compare">
-					<clinic  />
+					<clinic />
 				</v-card>
 				<v-row v-else>
 					<v-row>
 						<v-col md="6">
-							<v-text-field hide-details outlined dense rounded placeholder="Speciality"
-								append-icon="mdi-currency-usd" class="w-100 px-5"></v-text-field>
+							<v-text-field hide-details outlined dense rounded placeholder="Speciality" class="w-100 px-5">
+							</v-text-field>
 						</v-col>
 						<v-col md="6">
-							<v-text-field hide-details outlined dense rounded placeholder="Treatment"
-								append-icon="mdi-microphone" class="w-100 px-5"></v-text-field>
+							<v-text-field hide-details outlined dense rounded placeholder="Treatment" class="w-100 px-5">
+							</v-text-field>
 						</v-col>
 						<v-col md="6">
-							<v-text-field hide-details outlined dense rounded placeholder="Location"
-								append-icon="mdi-map-marker" class="w-100 px-5"></v-text-field>
+							<v-text-field hide-details outlined dense rounded placeholder="Location" append-icon="mdi-map-marker"
+								class="w-100 px-5"></v-text-field>
 						</v-col>
 						<v-col md="6">
-							<v-text-field hide-details outlined dense rounded placeholder="Price"
-								append-icon="mdi-currency-usd" class="w-100 px-5"></v-text-field>
+							<v-text-field hide-details outlined dense rounded placeholder="Price" append-icon="mdi-currency-usd"
+								class="w-100 px-5"></v-text-field>
 						</v-col>
 					</v-row>
 					<v-row class="px-5">
 						<v-col @click="compare = !compare" md="6" v-for="i in 6" :key="i">
-							<card-speciality  />
+							<card-speciality />
 						</v-col>
 					</v-row>
 				</v-row>
@@ -46,20 +46,24 @@
 	import CardSpeciality from '@/components/Card'
 	export default {
 		components: {
-			Clinic,  CardSpeciality
+			Clinic,
+			CardSpeciality
 		},
 		data: () => ({
 			compare: false
 		})
 	}
 </script>
+
 <style lang="scss" scoped>
-.card-base{
-	border: none !important;
-	background: transparent;
-}
-.compare {
+#compare {
+	.card-base {
+		border: none !important;
+		background: transparent;
+	}
+
 	position: relative;
+
 	&::before {
 		content: "";
 		position: absolute;

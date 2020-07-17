@@ -3,7 +3,7 @@
 		<section class="hero">
 			<img src="@/assets/image/hero.png" alt="" class="img-hero">
 			<transition name="up">
-			<img v-if="wave" src="@/assets/image/wave.svg" alt="" class="img-hero-wave">
+				<img v-if="wave" src="@/assets/image/wave.svg" alt="" class="img-hero-wave">
 			</transition>
 			<div class="container">
 				<v-row class="container-hero" align="center">
@@ -44,7 +44,7 @@
 								<a href="#">
 									<i class="fa fa-instagram"></i>
 								</a>
-								<a href="#" @click.prevent="wave=!wave">
+								<a href="#">
 									<i class="fa fa-globe"></i>
 								</a>
 							</div>
@@ -52,8 +52,8 @@
 					</v-col>
 					<v-col :sm="12" class="up d-flex justify-center">
 						<div class="banner-dots">
-							<div @click="setBanner(i-1)" :class="{'active': (i-1)===showBanner}" class="dot"
-								v-for="i in 3" :key="i"></div>
+							<div @click="setBanner(i-1)" :class="{'active': (i-1)===showBanner}" class="dot" v-for="i in 3" :key="i">
+							</div>
 						</div>
 					</v-col>
 				</v-row>
@@ -83,8 +83,7 @@ export default {
 				pagination: false,
 				loop: true
 			},
-			texts: [
-				{
+			texts: [{
 					title: 'Want to know much a medical service costs?',
 					items: [
 						'Search and compare services costs.',
@@ -140,7 +139,7 @@ export default {
 			width: 100%;
 			height: 100%;
 			z-index: 0;
-			object-fit: cover; 
+			object-fit: cover;
 		}
 
 		.img-hero-wave {
@@ -166,6 +165,7 @@ export default {
 			.become-list {
 				width: 435px;
 				height: 180px;
+
 				li {
 					list-style: none;
 					padding: 3px;
@@ -215,10 +215,16 @@ export default {
 		}
 	}
 
-.up-enter-active, .up-leave-active {
-  transition: all 1s ease-in-out;
-}
-.up-enter, .up-leave-to /* .up-leave-active below version 2.1.8 */ {
-  transform: translateY(100%) rotate(-5deg);
-}
+	.up-enter-active,
+	.up-leave-active {
+		transition: all 1s ease-in-out;
+	}
+
+	.up-enter,
+	.up-leave-to
+
+	/* .up-leave-active below version 2.1.8 */
+		{
+		transform: translateY(100%) rotate(-5deg);
+	}
 </style>

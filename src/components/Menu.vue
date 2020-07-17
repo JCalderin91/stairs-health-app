@@ -4,7 +4,7 @@
       <v-toolbar-title class="container-logo">
         <router-link tag="a" :to="{name:'home'}">
           <img class="logo-app" src="@/assets/logo-white.png" alt="">
-        </router-link>  
+        </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
@@ -47,22 +47,26 @@
 </script>
 
 <style scoped lang="scss">
-#menu{
+#menu {
   z-index: 30;
-  .container{
+
+  .container {
     height: 100%;
+
     .container-logo,
-    .logo-app{
+    .logo-app {
       height: 100%;
     }
-    .menu-nav-bar{
-      span{
+
+    .menu-nav-bar {
+      span {
         cursor: pointer;
         padding: 3px 5px;
         margin: 0 3px;
         color: white;
         position: relative;
-        &.layer::before{
+
+        &.layer::before {
           content: '';
           background: #04D5F5;
           position: absolute;

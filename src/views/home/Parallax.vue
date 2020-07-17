@@ -1,14 +1,7 @@
 <template>
-	<v-parallax
-		dark
-		src="@/assets/image/parallax.png"
-		height="350"
-	>
+	<v-parallax dark src="@/assets/image/parallax.png" height="350">
 		<v-container>
-			<v-row
-				align="center"
-				justify="center"
-			>
+			<v-row align="center" justify="center">
 				<v-col :md="12" class="d-flex justify-start" cols="12">
 					<div class="box registered">
 						<h1 class="display-1 font-weight-thin mb-4">Registered</h1>
@@ -26,15 +19,17 @@
 </template>
 
 <style scoped lang="scss">
-.box{
+.box {
 	padding: 3rem 2.5rem;
 	border-radius: 8px;
 	margin: 0 15px;
 	width: 300px;
-	&.registered{
+
+	&.registered {
 		background-color: #00cae9ee;
 	}
-	&.premium{
+
+	&.premium {
 		background-color: #ffe600ee;
 		color: #555;
 	}
